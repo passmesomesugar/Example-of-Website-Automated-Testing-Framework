@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="selenide_test_project_testng" />
         <module name="Selenide-Test-NG-Blank-project" />
+        <module name="Showcase testing framework" />
       </profile>
     </annotationProcessing>
   </component>
