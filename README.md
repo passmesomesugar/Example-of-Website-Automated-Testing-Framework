@@ -1,1 +1,2 @@
-This can used as start up project for selenide + test ng + java 11 framework.
+This is an example project for test automation. 
+Selenide, TestNG used as primary technologies.
