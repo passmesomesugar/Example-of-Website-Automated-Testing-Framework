@@ -1,6 +1,7 @@
 package com.github.passmesomesugar.smoke;
 
 import com.codeborne.selenide.Selectors;
+import com.codeborne.selenide.Selenide;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.element;
@@ -11,7 +12,12 @@ public class SignInTest extends BasicTestConditions {
     public void openHomeAndSignIn() {
         open(BASEURL);
         element(Selectors.byText("Sign In")).click();
-        element(Selectors.byCssSelector("input[name='username']")).setValue("Valid User Name");
-        element(Selectors.byCssSelector("input[name='password']")).setValue("Valid User Pass");
+        /*
+         * Please used valid username and password to run this test.
+         * */
+        element(Selectors.byCssSelector("input[name='username']")).setValue("~");
+        element(Selectors.byCssSelector("input[name='password']")).setValue("~");
+        element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
+        Selenide.sleep(5000);
     }
 }
