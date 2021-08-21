@@ -1,13 +1,15 @@
-package com.github.passmesomesugar.smoke;
+package com.github.passmesomesugar.login;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
+import com.github.passmesomesugar.CommonTestConditions;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.element;
+import static com.codeborne.selenide.Selenide.open;
 
-public class SignInTest extends BasicTestConditions {
-    @Test(groups = "this")
+public class SignInTest extends CommonTestConditions {
+    @Test(groups = "smoke")
     public void openHomeAndSignIn() {
         open(BASEURL);
         element(Selectors.byText("Sign In")).click();
@@ -15,6 +17,5 @@ public class SignInTest extends BasicTestConditions {
         element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
         element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
         element(Selectors.byText("Sign In")).shouldNotHave(Condition.exist);
-        sleep(5000);
     }
 }

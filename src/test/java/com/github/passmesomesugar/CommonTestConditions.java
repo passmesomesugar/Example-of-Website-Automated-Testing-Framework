@@ -1,11 +1,11 @@
-package com.github.passmesomesugar.smoke;
+package com.github.passmesomesugar;
 
 import com.codeborne.selenide.Selenide;
 import com.github.passmesomesugar.services.PropertyDataReader;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-public class BasicTestConditions {
+public class CommonTestConditions {
     public String BASEURL = "https://boardgamegeek.com";
     public int URL_CHECKS_TIMEOUT = 4000;
     public String currentEnv = System.getProperty("env");

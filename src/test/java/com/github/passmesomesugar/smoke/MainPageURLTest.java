@@ -2,13 +2,14 @@ package com.github.passmesomesugar.smoke;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.github.passmesomesugar.CommonTestConditions;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverConditions.url;
 import static com.codeborne.selenide.WebDriverConditions.urlStartingWith;
 
-public class MainPageURLTest extends BasicTestConditions {
+public class MainPageURLTest extends CommonTestConditions {
     @Test(groups = "smoke")
     public void openMainPageAndCheckURL() {
         Configuration.timeout = URL_CHECKS_TIMEOUT;
