@@ -10,7 +10,7 @@ import static com.codeborne.selenide.WebDriverConditions.url;
 import static com.codeborne.selenide.WebDriverConditions.urlStartingWith;
 
 public class MainPageURLTest extends CommonTestConditions {
-    @Test(groups = "smoke")
+    @Test(groups = "smoke", description = "checking AUT url for errors")
     public void openMainPageAndCheckURL() {
         Configuration.timeout = URL_CHECKS_TIMEOUT;
         open(BASEURL);
