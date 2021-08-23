@@ -1,1 +1,2 @@
+mvn -Denv=prod-env -Dsurefire.suiteXmlFiles=src\test\resources\smoke.xml clean test
 mvn -Denv=prod-env -Dsurefire.suiteXmlFiles=src\test\resources\this.xml clean test

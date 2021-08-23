@@ -9,7 +9,7 @@ public class CommonTestConditions {
     public String BASEURL = "https://boardgamegeek.com";
     public int URL_CHECKS_TIMEOUT = 4000;
     public String currentEnv = System.getProperty("env");
-    public String blank =
+    public String BLANKPAGE =
             System.getProperty("user.dir").concat("\\").concat("\\src\\test\\resources\\blankpage.html");
     /*
      * Please set a valid username and password in a "prod-env.properties" file and put it in "\src\test\resources".
@@ -21,7 +21,7 @@ public class CommonTestConditions {
     public String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
 
     public void openBlank() {
-        Selenide.open(blank);
+        Selenide.open(BLANKPAGE);
     }
 
     @BeforeTest

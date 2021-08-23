@@ -18,5 +18,6 @@ public class MainPageURLTest extends CommonTestConditions {
         Selenide.webdriver().shouldNotHave(url("http://yandex.ru"));
         Selenide.webdriver().shouldNotHave(urlStartingWith("http://"));
         Selenide.webdriver().shouldNotHave(urlStartingWith("ftp://"));
+        open(BLANKPAGE);
     }
 }
