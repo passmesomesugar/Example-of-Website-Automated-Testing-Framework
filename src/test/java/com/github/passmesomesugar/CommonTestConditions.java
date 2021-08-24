@@ -20,10 +20,6 @@ public class CommonTestConditions {
     public String userLogin = PropertyDataReader.getProperties(currentEnv).getProperty("user.login.name");
     public String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
 
-    public void openBlank() {
-        Selenide.open(BLANKPAGE);
-    }
-
     @BeforeTest
     public void actionsBeforeTest() {
         System.out.println("Test " + this.getClass().getName() + " started");
