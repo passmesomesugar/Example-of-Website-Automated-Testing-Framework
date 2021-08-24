@@ -14,7 +14,10 @@ public class SearchResultTest extends CommonTestConditions {
         String searchQuery = "Dune";
         open(BASEURL);
         element(Selectors.byCssSelector("input[name='searchTerm']")).setValue(searchQuery).pressEnter();
-        element("#collection").shouldNotHave(Condition.text(" No Items Found "));
+        element(Selectors.byCssSelector("#collection")).shouldNotHave(Condition.text(" No Items Found "));
+        element(Selectors.byCssSelector("#collection")).shouldNotHave(Condition.exist);
+        element(Selectors.byCssSelector("#collection")).shouldNotHave(Condition.visible);
+
         open(BLANKPAGE);
     }
 }
