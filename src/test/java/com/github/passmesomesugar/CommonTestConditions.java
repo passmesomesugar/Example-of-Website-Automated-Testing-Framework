@@ -1,8 +1,12 @@
 package com.github.passmesomesugar;
 
+import com.codeborne.selenide.Selectors;
 import com.github.passmesomesugar.services.PropertyDataReader;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+
+import static com.codeborne.selenide.Selenide.element;
+import static com.codeborne.selenide.Selenide.open;
 
 public class CommonTestConditions {
     public String BASEURL = "https://boardgamegeek.com";
@@ -18,6 +22,14 @@ public class CommonTestConditions {
      * */
     public String userLogin = PropertyDataReader.getProperties(currentEnv).getProperty("user.login.name");
     public String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
+
+    public void logIn() {
+        open(BASEURL);
+        element(Selectors.byText("Sign In")).click();
+        element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
+        element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
+        element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
+    }
 
     @BeforeTest
     public void actionsBeforeTest() {
