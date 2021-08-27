@@ -31,6 +31,12 @@ public class CommonTestConditions {
         element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
     }
 
+    public void logOut() {
+        open(BASEURL);
+        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
+        element(Selectors.byLinkText("Sign Out")).click();
+    }
+
     @BeforeTest
     public void actionsBeforeTest() {
         // logger.info("Test " + this.getClass().getName() + " started");

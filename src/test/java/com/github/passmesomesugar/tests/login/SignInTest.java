@@ -17,8 +17,6 @@ public class SignInTest extends CommonTestConditions {
         element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
         element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
         element(Selectors.byText("Sign In")).shouldNotHave(Condition.exist);
-        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
-        element(Selectors.byLinkText("Sign Out")).click();
-        open(BLANKPAGE);
+        logOut();
     }
 }

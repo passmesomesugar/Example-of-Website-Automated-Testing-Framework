@@ -28,5 +28,6 @@ public class EditContactWebsite extends CommonTestConditions {
         /*Assertions*/
         element(Selectors.byCssSelector("div.profile_block:nth-child(4) > table:nth-child(2) > tbody:nth-child(1) > " +
                 "tr:nth-child(7) > td:nth-child(2)")).shouldHave(Condition.text("www." + website + ".com"));
+        logOut();
     }
 }

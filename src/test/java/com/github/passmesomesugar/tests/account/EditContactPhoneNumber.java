@@ -27,5 +27,6 @@ public class EditContactPhoneNumber extends CommonTestConditions {
         element(Selectors.byLinkText("Account")).click();
         element(Selectors.byLinkText("Edit Contact Details")).click();
         element(Selectors.byCssSelector("input[id='phone']")).shouldHave(Condition.attribute("value", phoneNumber));
+        logOut();
     }
 }

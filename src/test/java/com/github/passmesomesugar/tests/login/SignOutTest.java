@@ -19,6 +19,5 @@ public class SignOutTest extends CommonTestConditions {
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Sign Out")).click();
         element(Selectors.byText("Sign In")).shouldHave(Condition.exist);
-        open(BLANKPAGE);
     }
 }

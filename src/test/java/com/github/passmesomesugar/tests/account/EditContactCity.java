@@ -20,11 +20,7 @@ public class EditContactCity extends CommonTestConditions {
         element(Selectors.byCssSelector("input[id='city']")).setValue(city);
         element(Selectors.byCssSelector("input[id='password']")).setValue(userPassword);
         element(Selectors.byCssSelector("input[type='submit']")).click();
-        open(BASEURL);
-        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
-        element(Selectors.byLinkText("Profile")).click();
-
-        /*Assertions*/
         element(Selectors.byCssSelector("div.profile_block:nth-child(4) > table:nth-child(2)")).shouldHave(Condition.text(city));
+        logOut();
     }
 }

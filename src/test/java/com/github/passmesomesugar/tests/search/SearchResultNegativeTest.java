@@ -16,6 +16,5 @@ public class SearchResultNegativeTest extends CommonTestConditions {
         open(BASEURL);
         element(Selectors.byCssSelector("input[name='searchTerm']")).setValue(searchQuery).pressEnter();
         element(Selectors.byCssSelector("#collection")).shouldHave(Condition.text(" No Items Found "));
-        open(BLANKPAGE);
     }
 }

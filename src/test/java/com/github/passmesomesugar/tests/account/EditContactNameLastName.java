@@ -6,8 +6,7 @@ import com.github.passmesomesugar.CommonTestConditions;
 import com.github.passmesomesugar.services.StringService;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.element;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class EditContactNameLastName extends CommonTestConditions {
     String firstName = StringService.getRandomString(9);
@@ -28,5 +27,7 @@ public class EditContactNameLastName extends CommonTestConditions {
         element(Selectors.byLinkText("Profile")).click();
         /*Assertions*/
         element(Selectors.byCssSelector("div[data-username=" + userLogin + "]")).shouldHave(Condition.text(firstName + " " + lastName));
+        logOut();
+        sleep(5000);
     }
 }
