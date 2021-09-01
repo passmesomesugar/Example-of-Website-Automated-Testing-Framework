@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CommonTestConditions {
-    public String BASEURL = "https://boardgamegeek.com";
+    public String MAINURL = "https://boardgamegeek.com";
     public int URL_CHECKS_TIMEOUT = 4000;
     public String currentEnv = System.getProperty("env");
     public String BLANKPAGE =
@@ -24,7 +24,7 @@ public class CommonTestConditions {
     public String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
 
     public void logIn() {
-        open(BASEURL);
+        open(MAINURL);
         element(Selectors.byText("Sign In")).click();
         element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
         element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
@@ -32,7 +32,7 @@ public class CommonTestConditions {
     }
 
     public void logOut() {
-        open(BASEURL);
+        open(MAINURL);
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Sign Out")).click();
     }

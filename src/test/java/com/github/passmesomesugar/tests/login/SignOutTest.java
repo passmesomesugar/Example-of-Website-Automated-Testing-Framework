@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class SignOutTest extends CommonTestConditions {
     @Test(groups = "smoke", description = "one can sign-out")
     public void signInAndSignOut() {
-        open(BASEURL);
+        open(MAINURL);
         element(Selectors.byText("Sign In")).click();
         element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
         element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);

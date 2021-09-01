@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class SignInTest extends CommonTestConditions {
     @Test(groups = "smoke", description = "one can sign-in using valid credentials")
     public void openHomeAndSignIn() {
-        open(BASEURL);
+        open(MAINURL);
         element(Selectors.byText("Sign In")).click();
         element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
         element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);

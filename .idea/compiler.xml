@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Showcase Testing Framework" />
         <module name="selenide_test_project_testng" />
         <module name="Selenide-Test-NG-Blank-project" />
         <module name="Showcase testing framework" />

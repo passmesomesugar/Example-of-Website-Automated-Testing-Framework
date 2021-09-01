@@ -21,7 +21,7 @@ public class EditContactWebsite extends CommonTestConditions {
         element(Selectors.byCssSelector("input[id='website']")).setValue("www." + website + ".com");
         element(Selectors.byCssSelector("input[id='password']")).setValue(userPassword);
         element(Selectors.byCssSelector("input[type='submit']")).click();
-        open(BASEURL);
+        open(MAINURL);
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Profile")).click();
 

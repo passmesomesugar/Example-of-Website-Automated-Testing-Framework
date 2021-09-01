@@ -13,7 +13,7 @@ public class SearchResultNegativeTest extends CommonTestConditions {
     @Test(groups = "smoke", description = "one can not retrieve search results")
     public void searchAndRetrieve() {
         String searchQuery = StringService.getRandomString(9);
-        open(BASEURL);
+        open(MAINURL);
         element(Selectors.byCssSelector("input[name='searchTerm']")).setValue(searchQuery).pressEnter();
         element(Selectors.byCssSelector("#collection")).shouldHave(Condition.text(" No Items Found "));
     }

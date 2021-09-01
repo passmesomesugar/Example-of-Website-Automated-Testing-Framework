@@ -22,7 +22,7 @@ public class EditContactNameLastName extends CommonTestConditions {
         element(Selectors.byCssSelector("input[id='lastname']")).setValue(lastName);
         element(Selectors.byCssSelector("input[id='password']")).setValue(userPassword);
         element(Selectors.byCssSelector("input[type='submit']")).click();
-        open(BASEURL);
+        open(MAINURL);
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Profile")).click();
         /*Assertions*/

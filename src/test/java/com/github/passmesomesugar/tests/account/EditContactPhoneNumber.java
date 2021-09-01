@@ -22,7 +22,7 @@ public class EditContactPhoneNumber extends CommonTestConditions {
         element(Selectors.byCssSelector("input[id='password']")).setValue(userPassword);
         element(Selectors.byCssSelector("input[type='submit']")).click();
         /*Assertions*/
-        open(BASEURL);
+        open(MAINURL);
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Account")).click();
         element(Selectors.byLinkText("Edit Contact Details")).click();
