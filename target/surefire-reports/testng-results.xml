@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="12" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-10-06T17:53:54 ALMT" name="Smoke" finished-at="2021-10-06T17:56:08 ALMT" duration-ms="134047">
+    <groups>
+      <group name="smoke">
+        <method signature="AboutPageTest.aboutPageTest()[pri:0, instance:com.github.passmesomesugar.tests.links.AboutPageTest@429bffaa]" name="aboutPageTest" class="com.github.passmesomesugar.tests.links.AboutPageTest"/>
+        <method signature="EditContactCity.editContactDetailsCity()[pri:0, instance:com.github.passmesomesugar.tests.account.EditContactCity@7ea9e1e2]" name="editContactDetailsCity" class="com.github.passmesomesugar.tests.account.EditContactCity"/>
+        <method signature="EditContactNameLastName.editContactDetailsNameLastName()[pri:0, instance:com.github.passmesomesugar.tests.account.EditContactNameLastName@24fcf36f]" name="editContactDetailsNameLastName" class="com.github.passmesomesugar.tests.account.EditContactNameLastName"/>
+        <method signature="EditContactPhoneNumber.editContactDetailsPhoneNumber()[pri:0, instance:com.github.passmesomesugar.tests.account.EditContactPhoneNumber@10feca44]" name="editContactDetailsPhoneNumber" class="com.github.passmesomesugar.tests.account.EditContactPhoneNumber"/>
+        <method signature="EditContactWebsite.editContactDetailsWebsite()[pri:0, instance:com.github.passmesomesugar.tests.account.EditContactWebsite@3fb1549b]" name="editContactDetailsWebsite" class="com.github.passmesomesugar.tests.account.EditContactWebsite"/>
+        <method signature="MainPageURLTest.openMainPageAndCheckURL()[pri:0, instance:com.github.passmesomesugar.tests.url.MainPageURLTest@32b260fa]" name="openMainPageAndCheckURL" class="com.github.passmesomesugar.tests.url.MainPageURLTest"/>
+        <method signature="SearchResultNegativeTest.searchAndRetrieveNegative()[pri:0, instance:com.github.passmesomesugar.tests.search.SearchResultNegativeTest@28f3b248]" name="searchAndRetrieveNegative" class="com.github.passmesomesugar.tests.search.SearchResultNegativeTest"/>
+        <method signature="SearchResultTest.searchAndRetrieve()[pri:0, instance:com.github.passmesomesugar.tests.search.SearchResultTest@1b1426f4]" name="searchAndRetrieve" class="com.github.passmesomesugar.tests.search.SearchResultTest"/>
+        <method signature="SignInTest.openHomeAndSignIn()[pri:0, instance:com.github.passmesomesugar.tests.login.SignInTest@7e5afaa6]" name="openHomeAndSignIn" class="com.github.passmesomesugar.tests.login.SignInTest"/>
+        <method signature="SignOutTest.signInAndSignOut()[pri:0, instance:com.github.passmesomesugar.tests.login.SignOutTest@63a12c68]" name="signInAndSignOut" class="com.github.passmesomesugar.tests.login.SignOutTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2021-10-06T17:53:54 ALMT" name="Smoke" finished-at="2021-10-06T17:56:08 ALMT" duration-ms="134047">
+      <class name="com.github.passmesomesugar.tests.links.AboutPageTest">
+        <test-method signature="aboutPageTest()[pri:0, instance:com.github.passmesomesugar.tests.links.AboutPageTest@429bffaa]" started-at="2021-10-06T17:55:32 ALMT" name="aboutPageTest" description="one can access about page" finished-at="2021-10-06T17:55:45 ALMT" duration-ms="12518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aboutPageTest -->
+      </class> <!-- com.github.passmesomesugar.tests.links.AboutPageTest -->
+      <class name="com.github.passmesomesugar.tests.search.SearchResultTest">
+        <test-method signature="searchAndRetrieve()[pri:0, instance:com.github.passmesomesugar.tests.search.SearchResultTest@1b1426f4]" started-at="2021-10-06T17:56:02 ALMT" name="searchAndRetrieve" description="one can retrieve search results" finished-at="2021-10-06T17:56:07 ALMT" duration-ms="4856" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchAndRetrieve -->
+      </class> <!-- com.github.passmesomesugar.tests.search.SearchResultTest -->
+      <class name="com.github.passmesomesugar.tests.login.SignOutTest">
+        <test-method signature="signInAndSignOut()[pri:0, instance:com.github.passmesomesugar.tests.login.SignOutTest@63a12c68]" started-at="2021-10-06T17:55:51 ALMT" name="signInAndSignOut" description="one can sign-out" finished-at="2021-10-06T17:55:56 ALMT" duration-ms="5756" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInAndSignOut -->
+      </class> <!-- com.github.passmesomesugar.tests.login.SignOutTest -->
+      <class name="com.github.passmesomesugar.tests.search.SearchResultNegativeTest">
+        <test-method signature="searchAndRetrieveNegative()[pri:0, instance:com.github.passmesomesugar.tests.search.SearchResultNegativeTest@28f3b248]" started-at="2021-10-06T17:55:56 ALMT" name="searchAndRetrieveNegative" description="one can not retrieve search results" finished-at="2021-10-06T17:56:02 ALMT" duration-ms="5859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchAndRetrieveNegative -->
+      </class> <!-- com.github.passmesomesugar.tests.search.SearchResultNegativeTest -->
+      <class name="com.github.passmesomesugar.tests.url.MainPageURLTest">
+        <test-method signature="openMainPageAndCheckURL()[pri:0, instance:com.github.passmesomesugar.tests.url.MainPageURLTest@32b260fa]" started-at="2021-10-06T17:56:07 ALMT" name="openMainPageAndCheckURL" description="checking AUT url for errors" finished-at="2021-10-06T17:56:08 ALMT" duration-ms="750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMainPageAndCheckURL -->
+      </class> <!-- com.github.passmesomesugar.tests.url.MainPageURLTest -->
+      <class name="com.github.passmesomesugar.tests.login.SignInTest">
+        <test-method signature="openHomeAndSignIn()[pri:0, instance:com.github.passmesomesugar.tests.login.SignInTest@7e5afaa6]" started-at="2021-10-06T17:55:45 ALMT" name="openHomeAndSignIn" description="one can sign-in using valid credentials" finished-at="2021-10-06T17:55:51 ALMT" duration-ms="5708" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openHomeAndSignIn -->
+      </class> <!-- com.github.passmesomesugar.tests.login.SignInTest -->
+      <class name="com.github.passmesomesugar.tests.account.EditContactNameLastName">
+        <test-method signature="editContactDetailsNameLastName()[pri:0, instance:com.github.passmesomesugar.tests.account.EditContactNameLastName@24fcf36f]" started-at="2021-10-06T17:54:19 ALMT" name="editContactDetailsNameLastName" description="one can edit contact details: first and last name" finished-at="2021-10-06T17:54:39 ALMT" duration-ms="19920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editContactDetailsNameLastName -->
+      </class> <!-- com.github.passmesomesugar.tests.account.EditContactNameLastName -->
+      <class name="com.github.passmesomesugar.tests.account.EditContactWebsite">
+        <test-method signature="editContactDetailsWebsite()[pri:0, instance:com.github.passmesomesugar.tests.account.EditContactWebsite@3fb1549b]" started-at="2021-10-06T17:55:02 ALMT" name="editContactDetailsWebsite" description="one can edit contact details: website" finished-at="2021-10-06T17:55:32 ALMT" duration-ms="30543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editContactDetailsWebsite -->
+      </class> <!-- com.github.passmesomesugar.tests.account.EditContactWebsite -->
+      <class name="com.github.passmesomesugar.tests.account.EditContactPhoneNumber">
+        <test-method signature="editContactDetailsPhoneNumber()[pri:0, instance:com.github.passmesomesugar.tests.account.EditContactPhoneNumber@10feca44]" started-at="2021-10-06T17:54:39 ALMT" name="editContactDetailsPhoneNumber" description="one can change phone number" finished-at="2021-10-06T17:55:02 ALMT" duration-ms="22928" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editContactDetailsPhoneNumber -->
+      </class> <!-- com.github.passmesomesugar.tests.account.EditContactPhoneNumber -->
+      <class name="com.github.passmesomesugar.tests.account.EditContactCity">
+        <test-method signature="editContactDetailsCity()[pri:0, instance:com.github.passmesomesugar.tests.account.EditContactCity@7ea9e1e2]" started-at="2021-10-06T17:53:54 ALMT" name="editContactDetailsCity" description="one can edit contact details: city" finished-at="2021-10-06T17:54:19 ALMT" duration-ms="25165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editContactDetailsCity -->
+      </class> <!-- com.github.passmesomesugar.tests.account.EditContactCity -->
+    </test> <!-- Smoke -->
+  </suite> <!-- Smoke -->
+</testng-results>

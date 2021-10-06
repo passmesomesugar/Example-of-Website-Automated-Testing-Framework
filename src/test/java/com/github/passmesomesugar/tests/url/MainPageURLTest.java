@@ -13,11 +13,11 @@ public class MainPageURLTest extends CommonTestConditions {
     @Test(groups = "smoke", description = "checking AUT url for errors")
     public void openMainPageAndCheckURL() {
         Configuration.timeout = URL_CHECKS_TIMEOUT;
-        open(MAINURL);
+        open(MAIN_URL);
         Selenide.webdriver().shouldHave(url("https://boardgamegeek.com/"));
         Selenide.webdriver().shouldNotHave(url("http://yandex.ru"));
         Selenide.webdriver().shouldNotHave(urlStartingWith("http://"));
         Selenide.webdriver().shouldNotHave(urlStartingWith("ftp://"));
-        open(BLANKPAGE);
+        open(BLANK_PAGE);
     }
 }

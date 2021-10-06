@@ -21,13 +21,14 @@ public class EditContactWebsite extends CommonTestConditions {
         element(Selectors.byCssSelector("input[id='website']")).setValue("www." + website + ".com");
         element(Selectors.byCssSelector("input[id='password']")).setValue(userPassword);
         element(Selectors.byCssSelector("input[type='submit']")).click();
-        open(MAINURL);
+        open(MAIN_URL);
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Profile")).click();
 
-        /*Assertions*/
+        /* Assertions */
         element(Selectors.byCssSelector("div.profile_block:nth-child(4) > table:nth-child(2) > tbody:nth-child(1) > " +
                 "tr:nth-child(7) > td:nth-child(2)")).shouldHave(Condition.text("www." + website + ".com"));
+        open(BLANK_PAGE);
         logOut();
     }
 }

@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class SignOutTest extends CommonTestConditions {
     @Test(groups = "smoke", description = "one can sign-out")
     public void signInAndSignOut() {
-        open(MAINURL);
+        open(MAIN_URL);
         element(Selectors.byText("Sign In")).click();
         element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
         element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
@@ -19,5 +19,6 @@ public class SignOutTest extends CommonTestConditions {
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Sign Out")).click();
         element(Selectors.byText("Sign In")).shouldHave(Condition.exist);
+        open(BLANK_PAGE);
     }
 }

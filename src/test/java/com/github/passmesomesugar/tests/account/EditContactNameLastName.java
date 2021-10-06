@@ -22,12 +22,12 @@ public class EditContactNameLastName extends CommonTestConditions {
         element(Selectors.byCssSelector("input[id='lastname']")).setValue(lastName);
         element(Selectors.byCssSelector("input[id='password']")).setValue(userPassword);
         element(Selectors.byCssSelector("input[type='submit']")).click();
-        open(MAINURL);
+        open(MAIN_URL);
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Profile")).click();
-        /*Assertions*/
+        /* Assertions */
         element(Selectors.byCssSelector("div[data-username=" + userLogin + "]")).shouldHave(Condition.text(firstName + " " + lastName));
+        open(BLANK_PAGE);
         logOut();
-        sleep(5000);
     }
 }

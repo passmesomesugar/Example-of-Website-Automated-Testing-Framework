@@ -21,6 +21,7 @@ public class EditContactCity extends CommonTestConditions {
         element(Selectors.byCssSelector("input[id='password']")).setValue(userPassword);
         element(Selectors.byCssSelector("input[type='submit']")).click();
         element(Selectors.byCssSelector("div.profile_block:nth-child(4) > table:nth-child(2)")).shouldHave(Condition.text(city));
+        open(BLANK_PAGE);
         logOut();
     }
 }

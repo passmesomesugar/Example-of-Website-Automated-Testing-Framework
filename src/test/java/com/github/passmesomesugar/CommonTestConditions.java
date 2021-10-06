@@ -1,5 +1,6 @@
 package com.github.passmesomesugar;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selectors;
 import com.github.passmesomesugar.services.PropertyDataReader;
 import org.testng.annotations.AfterTest;
@@ -9,10 +10,10 @@ import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CommonTestConditions {
-    public String MAINURL = "https://boardgamegeek.com";
+    public String MAIN_URL = "https://boardgamegeek.com";
     public int URL_CHECKS_TIMEOUT = 4000;
     public String currentEnv = System.getProperty("env");
-    public String BLANKPAGE =
+    public String BLANK_PAGE =
             System.getProperty("user.dir").concat("\\").concat("\\src\\test\\resources\\blankpage.html");
     /*
      * Please set a valid username and password in a "prod-env.properties" file and put it in "\src\test\resources".
@@ -24,7 +25,7 @@ public class CommonTestConditions {
     public String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
 
     public void logIn() {
-        open(MAINURL);
+        open(MAIN_URL);
         element(Selectors.byText("Sign In")).click();
         element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
         element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
@@ -32,7 +33,7 @@ public class CommonTestConditions {
     }
 
     public void logOut() {
-        open(MAINURL);
+        open(MAIN_URL);
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Sign Out")).click();
     }

@@ -11,10 +11,11 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SearchResultNegativeTest extends CommonTestConditions {
     @Test(groups = "smoke", description = "one can not retrieve search results")
-    public void searchAndRetrieve() {
+    public void searchAndRetrieveNegative() {
         String searchQuery = StringService.getRandomString(9);
-        open(MAINURL);
+        open(MAIN_URL);
         element(Selectors.byCssSelector("input[name='searchTerm']")).setValue(searchQuery).pressEnter();
         element(Selectors.byCssSelector("#collection")).shouldHave(Condition.text(" No Items Found "));
+        open(BLANK_PAGE);
     }
 }

@@ -1,0 +1,17 @@
+com\github\passmesomesugar\services\PropertyDataReader.class
+com\github\passmesomesugar\CommonTestConditions.class
+com\github\passmesomesugar\services\LinksParser.class
+com\github\passmesomesugar\services\StringService.class
+com\github\passmesomesugar\tests\account\EditContactNameLastName.class
+com\github\passmesomesugar\tests\login\SignInTest.class
+com\github\passmesomesugar\tests\url\MainPageURLTest.class
+com\github\passmesomesugar\tests\Delete.class
+com\github\passmesomesugar\tests\search\SearchResultTest.class
+com\github\passmesomesugar\tests\account\EditContactPhoneNumber.class
+com\github\passmesomesugar\tests\Delete2.class
+com\github\passmesomesugar\services\Scrolla.class
+com\github\passmesomesugar\tests\account\EditContactCity.class
+com\github\passmesomesugar\tests\search\SearchResultNegativeTest.class
+com\github\passmesomesugar\tests\login\SignOutTest.class
+com\github\passmesomesugar\tests\account\EditContactWebsite.class
+com\github\passmesomesugar\tests\links\AboutPageTest.class
