@@ -48,7 +48,7 @@ public class LinksParser {
             } else {
                 isValidLink = true;
                 //LOGGER.info("link: " + url + " is valid");
-                System.out.println(url + " is valid");
+                //System.out.println(url + " is valid");
             }
             return isValidLink;
         } else {
@@ -108,20 +108,20 @@ public class LinksParser {
         List<String> cleanList = new ArrayList<>();
         if (excludedLinks.isEmpty()) {
             cleanList = linksOnPage;
-            System.out.println("Excluded links is empty");
+
         } else {
             for (String linkOnPage : linksOnPage) {
                 int exclusionCounter = 0;
                 for (int i = 0; i < excludedLinks.size(); i++) {
                     if (linkOnPage.contains(excludedLinks.get(i))) {
                         exclusionCounter++;
-                        System.out.println("checking if " + linkOnPage + " contains " + excludedLinks.get(i) + " ,result check is: " + linkOnPage.contains(excludedLinks.get(i)));
-                        System.out.println("Exclusion counter: " + exclusionCounter);
+//                        System.out.println("checking if " + linkOnPage + " contains " + excludedLinks.get(i) + " ,result check is: " + linkOnPage.contains(excludedLinks.get(i)));
+//                        System.out.println("Exclusion counter: " + exclusionCounter);
                     }
                 }
                 if (exclusionCounter == 0) {
                     cleanList.add(linkOnPage);
-                    System.out.println("Adding " + linkOnPage + " to cleanList");
+//                    System.out.println("Adding " + linkOnPage + " to cleanList");
                 }
             }
         }
@@ -134,7 +134,7 @@ public class LinksParser {
             if (!isValidLink(link)) {
                 brokenLinks.add(link);
             } else {
-                System.out.println("Valid link: " + link);
+                //System.out.println("Valid link: " + link);
             }
         }
         if (!brokenLinks.isEmpty()) {
