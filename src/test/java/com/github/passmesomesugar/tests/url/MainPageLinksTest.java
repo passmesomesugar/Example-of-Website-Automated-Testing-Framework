@@ -1,4 +1,4 @@
-package com.github.passmesomesugar.tests;
+package com.github.passmesomesugar.tests.url;
 
 import com.codeborne.selenide.Selectors;
 import com.github.passmesomesugar.CommonTestConditions;
@@ -17,8 +17,8 @@ import static com.github.passmesomesugar.services.Scrolla.scrollUntilElementExis
 
 public class MainPageLinksTest extends CommonTestConditions {
 
-    @Test(groups = "this", description = "test")
-    public void deleteTest() {
+    @Test(groups = "smoke", description = "checking urls on main page")
+    public void mainPageLinksTest() {
         open(MAIN_URL);
         ArrayList<String> excludedLinks = new ArrayList<String>(Arrays.asList(PropertyDataReader.getProperties("currentEnv").getProperty(
                 "excluded.websites.to.check").split(" ")));
@@ -35,5 +35,6 @@ public class MainPageLinksTest extends CommonTestConditions {
         ArrayList<String> brokenLinks = checkLinks(cleanLinks);
         System.out.println("*******************************Broken links:*******************************");
         System.out.println(brokenLinks.size());
+        System.out.println(brokenLinks);
     }
 }
