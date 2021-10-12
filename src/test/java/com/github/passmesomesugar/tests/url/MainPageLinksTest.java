@@ -4,6 +4,7 @@ import com.codeborne.selenide.Selectors;
 import com.github.passmesomesugar.CommonTestConditions;
 import com.github.passmesomesugar.services.LinksParser;
 import com.github.passmesomesugar.services.PropertyDataReader;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -26,15 +27,13 @@ public class MainPageLinksTest extends CommonTestConditions {
         List links = LinksParser.getAllLinksOnPage();
         System.out.println("*******************************SIZE OF LINKS*******************************");
         System.out.println(links.size());
-        //  links.forEach(System.out::println);
-        //  links = LinksParser.removeExcludedLinks((ArrayList<String>) links, excludedLinks);
         ArrayList<String> cleanLinks = LinksParser.removeExcludedLinks((ArrayList<String>) links, excludedLinks);
         System.out.println("*******************************SIZE OF CLEAN LINKS*******************************");
         System.out.println(cleanLinks.size());
-        //        links.forEach(System.out::println);
         ArrayList<String> brokenLinks = checkLinks(cleanLinks);
         System.out.println("*******************************Broken links:*******************************");
         System.out.println(brokenLinks.size());
         System.out.println(brokenLinks);
+        Assert.assertTrue(brokenLinks.isEmpty());
     }
 }

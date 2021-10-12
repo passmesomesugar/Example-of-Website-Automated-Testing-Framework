@@ -1,6 +1,5 @@
 package com.github.passmesomesugar;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selectors;
 import com.github.passmesomesugar.services.PropertyDataReader;
 import org.testng.annotations.AfterTest;
@@ -20,6 +19,7 @@ public class CommonTestConditions {
      * File contents:
      * user.login.name=some_real_username
      * user.password=some_real_password
+     * excluded.websites.to.check=youtube linkedin /user/ ~ or any other websites you don't want to check separated by space
      * */
     public String userLogin = PropertyDataReader.getProperties(currentEnv).getProperty("user.login.name");
     public String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");

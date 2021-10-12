@@ -1,6 +1,5 @@
 package com.github.passmesomesugar.services;
 
-import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.By;
@@ -13,8 +12,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.codeborne.selenide.Selenide.executeJavaScript;
-import static com.codeborne.selenide.WebDriverConditions.url;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 
@@ -44,11 +41,11 @@ public class LinksParser {
             boolean isValidLink = false;
             if ((!isValidLinkCheckingWithRequestMethod(url, "HEAD"))
                     && (!isValidLinkCheckingWithRequestMethod(url, "GET"))) {
-                isValidLink = isLinkValidCheckInANewTab(url);
+                isValidLink = isLinkValidCheckInATab(url);
             } else {
                 isValidLink = true;
                 //LOGGER.info("link: " + url + " is valid");
-                //System.out.println(url + " is valid");
+                System.out.println(url + " is valid");
             }
             return isValidLink;
         } else {
@@ -82,26 +79,17 @@ public class LinksParser {
         return isValidLink;
     }
 
-    public static boolean isLinkValidCheckInANewTab(final String url) {
-        //LOGGER.info("Checking link " + url + " in a new tab.");
-        //TabsSwitcher.createNewTabAndSwitchToIt(getWebDriver().getDriver());
-        executeJavaScript("window.open('about:blank','_blank')");
+    public static boolean isLinkValidCheckInATab(final String url) {
         Selenide.open(url);
-        Selenide.switchTo().window(1);
         boolean pageLoaded = false;
-        //WaitersService.waitUntilPageIsCompletelyLoaded(getWebDriver().getDriver());
-        //if (getWebDriver().getCurrentUrl().equals(url)) {
         if (WebDriverRunner.url().contains(url)) {
             pageLoaded = true;
         }
-        //Selenide.closeWindow();
         return pageLoaded;
     }
 
     public static ArrayList<String> removeExcludedLinks(final ArrayList<String> linksOnPage,
                                                         final ArrayList<String> excludedLinks) {
-        //LOGGER.info("Removing excluded links from list of all links");
-
         System.out.println("Removing excluded links from list of all links");
         System.out.println(excludedLinks);
 
@@ -115,13 +103,13 @@ public class LinksParser {
                 for (int i = 0; i < excludedLinks.size(); i++) {
                     if (linkOnPage.contains(excludedLinks.get(i))) {
                         exclusionCounter++;
-//                        System.out.println("checking if " + linkOnPage + " contains " + excludedLinks.get(i) + " ,result check is: " + linkOnPage.contains(excludedLinks.get(i)));
-//                        System.out.println("Exclusion counter: " + exclusionCounter);
+                        System.out.println("checking if " + linkOnPage + " contains " + excludedLinks.get(i) + " ,result check is: " + linkOnPage.contains(excludedLinks.get(i)));
+                        System.out.println("Exclusion counter: " + exclusionCounter);
                     }
                 }
                 if (exclusionCounter == 0) {
                     cleanList.add(linkOnPage);
-//                    System.out.println("Adding " + linkOnPage + " to cleanList");
+                    System.out.println("Adding " + linkOnPage + " to cleanList");
                 }
             }
         }
