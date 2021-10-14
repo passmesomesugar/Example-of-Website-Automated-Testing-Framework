@@ -118,7 +118,7 @@ fabric.properties
 
 *.class
 
-
+prod-env.properties
 
 /misc
 /build/reports/tests
