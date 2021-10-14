@@ -26,4 +26,5 @@ public class ImageUploadTest extends CommonTestConditions {
         element(Selectors.byXpath("//button[contains(.,'Upload all')]")).click();
         sleep(5000);
     }
+    //дописать Assertion
 }

@@ -118,8 +118,8 @@ fabric.properties
 
 *.class
 
-user_name_and_password.properties
-prod-env.properties
+
+
 /misc
 /build/reports/tests
 *.log
