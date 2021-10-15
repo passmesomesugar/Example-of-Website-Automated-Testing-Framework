@@ -12,7 +12,7 @@ public class Scrolla {
     public static void scrollUntilElementExists(SelenideElement element) {
         while (!element.exists()) {
             executeJavaScript("window.scrollTo(0,document.body.scrollHeight);");
-           // sleep(1000);
+            executeJavaScript("window.scrollBy(0,-200)", "");
         }
     }
 }

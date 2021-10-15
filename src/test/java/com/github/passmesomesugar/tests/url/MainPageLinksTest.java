@@ -18,7 +18,7 @@ import static com.github.passmesomesugar.services.Scrolla.scrollUntilElementExis
 
 public class MainPageLinksTest extends CommonTestConditions {
 
-    @Test(groups = "smoke", description = "checking urls on main page")
+    @Test(groups = "1", description = "checking urls on main page")
     public void mainPageLinksTest() {
         open(MAIN_URL);
         ArrayList<String> excludedLinks = new ArrayList<String>(Arrays.asList(PropertyDataReader.getProperties("currentEnv").getProperty(
