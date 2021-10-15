@@ -1,6 +1,7 @@
 package com.github.passmesomesugar.tests.image;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selectors;
 import com.github.passmesomesugar.CommonTestConditions;
 import org.testng.annotations.Test;
@@ -20,7 +21,9 @@ public class ImageUploadTest extends CommonTestConditions {
         File file =
                 element(Selectors.byXpath("//*[contains(text(),'Choose Images')]//input"))
                         .uploadFile(new File("C:\\Users\\PC\\Desktop\\workdir\\Java\\Showcase Testing Framework\\src\\test\\resources\\img\\HD_empty_image.png"));
+        sleep(2000);
         element(Selectors.byXpath("//button[contains(.,'Upload all')]")).click();
+        sleep(2000);
         element(Selectors.byXpath("//span[contains(.,'Upload Complete. ')]")).shouldBe(Condition.exist);
     }
 }
