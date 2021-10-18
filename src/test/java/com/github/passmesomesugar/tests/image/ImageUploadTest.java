@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class ImageUploadTest extends CommonTestConditions {
 
-    @Test(groups = "smoke", description = "one can upload image")
+    @Test(groups = "this", description = "one can upload image", priority = 1)
     public void uploadImage() {
         logIn();
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
@@ -20,11 +20,22 @@ public class ImageUploadTest extends CommonTestConditions {
         element(Selectors.byLinkText("Upload Image")).click();
         File file =
                 element(Selectors.byXpath("//*[contains(text(),'Choose Images')]//input"))
-                        .uploadFile(new File("C:\\Users\\PC\\Desktop\\workdir\\Java\\Showcase Testing Framework\\src\\test\\resources\\img\\HD_empty_image.png"));
+                        .uploadFile(new File("C:\\Users\\PC\\Desktop\\workdir\\Java\\Showcase Testing Framework\\src\\test\\resources\\img\\2.png"));
         sleep(2000);
         element(Selectors.byXpath("//button[contains(.,'Upload all')]")).click();
         sleep(2000);
         element(Selectors.byXpath("//span[contains(.,'Upload Complete. ')]")).shouldBe(Condition.exist);
-        logOut();
+//        logOut();
     }
+
+    @Test(groups = "this", description = "one can remove uploaded picture", priority = 2)
+    public void removeImage() {
+        open(MAIN_URL);
+        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
+        element(Selectors.byLinkText("Gallery")).click();
+        element(Selectors.byTagName("gg-image")).click();
+
+    }
+
+
 }
