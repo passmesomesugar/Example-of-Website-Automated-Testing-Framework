@@ -1,9 +1,12 @@
 package com.github.passmesomesugar;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
 import com.github.passmesomesugar.services.PropertyDataReader;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+
+import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
@@ -27,6 +30,7 @@ public class CommonTestConditions {
     public void logIn() {
         open(MAIN_URL);
         element(Selectors.byText("Sign In")).click();
+        element(Selectors.byCssSelector("input[name='username']")).shouldHave(Condition.exist, Duration.ofSeconds(10));
         element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
         element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
         element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
