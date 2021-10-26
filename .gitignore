@@ -125,6 +125,6 @@ prod-env.properties
 *.log
 
 *.ods#
-.ods
+*.ods
 
 /target
