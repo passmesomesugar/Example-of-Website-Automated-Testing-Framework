@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 
 public class EditInterests extends CommonTestConditions {
 
-    @Test(groups = "this", description = "one can edit interests")
+    @Test(groups = "unready", description = "one can edit interests")
     public void editInterests() {
         logIn();
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
