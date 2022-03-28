@@ -1,15 +1,14 @@
-package com.github.passmesomesugar.tests.account;
+package com.github.passmesomesugar.straightforwardtests.account;
 
 import com.codeborne.selenide.Selectors;
 import com.github.passmesomesugar.CommonTestConditions;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.element;
-import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.*;
 
 public class EditInterests extends CommonTestConditions {
 
-    @Test(groups = "unready", description = "one can edit interests")
+    @Test(groups = "this", description = "one can edit interests")
     public void editInterests() {
         logIn();
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
@@ -23,6 +22,13 @@ public class EditInterests extends CommonTestConditions {
         element(Selectors.byId("favoritemusic")).setValue("Metallica");
         element(Selectors.byId("favoritetvshows")).setValue("Curb your enthusiasm");
         element(Selectors.byXpath("//input[@value='Submit'] ")).click();
+
+        open(MAIN_URL);
+        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
+        element(Selectors.byLinkText("Profile")).click();
+
+
+
         sleep(5000);
     }
 }
