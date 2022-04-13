@@ -1,4 +1,4 @@
-package com.github.passmesomesugar.straightforwardtests;
+package com.github.passmesomesugar.straightforward_pattern_tests;
 
 import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.commands.Commands;

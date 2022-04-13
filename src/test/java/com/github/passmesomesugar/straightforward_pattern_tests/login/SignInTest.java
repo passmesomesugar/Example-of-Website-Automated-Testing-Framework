@@ -1,4 +1,4 @@
-package com.github.passmesomesugar.straightforwardtests.login;
+package com.github.passmesomesugar.straightforward_pattern_tests.login;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
@@ -8,17 +8,15 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SignOutTest extends CommonTestConditions {
-    @Test(groups = "smoke", description = "one can sign-out")
-    public void signInAndSignOut() {
+public class SignInTest extends CommonTestConditions {
+    @Test(groups = "smoke", description = "one can sign-in using valid credentials")
+    public void openHomeAndSignIn() {
         open(MAIN_URL);
         element(Selectors.byText("Sign In")).click();
         element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
         element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
         element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
-        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
-        element(Selectors.byLinkText("Sign Out")).click();
-        element(Selectors.byText("Sign In")).shouldHave(Condition.exist);
-        open(BLANK_PAGE);
+        element(Selectors.byText("Sign In")).shouldNotHave(Condition.exist);
+        logOut();
     }
 }
