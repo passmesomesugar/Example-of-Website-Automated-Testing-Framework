@@ -10,7 +10,7 @@ public class EditInterests extends CommonTestConditions {
 
     @Test(groups = "this", description = "one can edit interests")
     public void editInterests() {
-        logIn();
+      //  logIn();
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Account")).click();
         sleep(2000);

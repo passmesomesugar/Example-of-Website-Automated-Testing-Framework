@@ -14,7 +14,7 @@ public class EditContactNameLastName extends CommonTestConditions {
 
     @Test(groups = "smoke", description = "one can edit contact details: first and last name")
     public void editContactDetailsNameLastName() {
-        logIn();
+//        logIn();
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Account")).click();
         element(Selectors.byLinkText("Edit Contact Details")).click();
@@ -28,6 +28,6 @@ public class EditContactNameLastName extends CommonTestConditions {
         /* Assertions */
         element(Selectors.byCssSelector("div[data-username=" + userLogin + "]")).shouldHave(Condition.text(firstName + " " + lastName));
         open(BLANK_PAGE);
-        logOut();
+//        logOut();
     }
 }

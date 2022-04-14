@@ -13,7 +13,7 @@ public class EditContactCity extends CommonTestConditions {
 
     @Test(groups = "smoke", description = "one can edit contact details: city")
     public void editContactDetailsCity() {
-        logIn();
+//        logIn();
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Account")).click();
         element(Selectors.byLinkText("Edit Contact Details")).click();
@@ -22,6 +22,6 @@ public class EditContactCity extends CommonTestConditions {
         element(Selectors.byCssSelector("input[type='submit']")).click();
         element(Selectors.byCssSelector("div.profile_block:nth-child(4) > table:nth-child(2)")).shouldHave(Condition.text(city));
         open(BLANK_PAGE);
-        logOut();
+//        logOut();
     }
 }

@@ -14,7 +14,7 @@ public class ImageUploadTest extends CommonTestConditions {
 
     @Test(groups = "smoke", description = "one can upload image", priority = 1)
     public void uploadImage() {
-        logIn();
+        //logIn();
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Gallery")).click();
         element(Selectors.byLinkText("Upload Image")).click();
@@ -39,7 +39,7 @@ public class ImageUploadTest extends CommonTestConditions {
         element(Selectors.byXpath("//button[text()=' Yes, Delete Image ']")).click();
         element(Selectors.byXpath("//*[contains(text(),' Image deleted. Redirecting... ')]")).shouldHave(Condition.exist, Duration.ofSeconds(10));
         sleep(7000);
-        logOut();
+       // logOut();
     }
 
 

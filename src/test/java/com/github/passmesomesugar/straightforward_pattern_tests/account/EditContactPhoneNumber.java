@@ -14,7 +14,7 @@ public class EditContactPhoneNumber extends CommonTestConditions {
 
     @Test(groups = "smoke", description = "one can change phone number")
     public void editContactDetailsPhoneNumber() {
-        logIn();
+     //   logIn();
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Account")).click();
         element(Selectors.byLinkText("Edit Contact Details")).click();
@@ -28,6 +28,6 @@ public class EditContactPhoneNumber extends CommonTestConditions {
         element(Selectors.byLinkText("Edit Contact Details")).click();
         element(Selectors.byCssSelector("input[id='phone']")).shouldHave(Condition.attribute("value", phoneNumber));
         open(BLANK_PAGE);
-        logOut();
+     //   logOut();
     }
 }

@@ -1,19 +1,25 @@
 package com.github.passmesomesugar;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selectors;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import com.github.passmesomesugar.services.PropertyDataReader;
+import io.qameta.allure.selenide.AllureSelenide;
+import io.qameta.allure.selenide.LogType;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import java.time.Duration;
+import java.util.logging.Level;
 
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CommonTestConditions {
     public String MAIN_URL = "https://boardgamegeek.com";
-    public int URL_CHECKS_TIMEOUT = 4000;
     public String currentEnv = System.getProperty("env");
     public String BLANK_PAGE =
             System.getProperty("user.dir").concat("\\").concat("\\src\\test\\resources\\blankpage.html");
@@ -27,20 +33,7 @@ public class CommonTestConditions {
     public String userLogin = PropertyDataReader.getProperties(currentEnv).getProperty("user.login.name");
     public String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
 
-    public void logIn() {
-        open(MAIN_URL);
-        element(Selectors.byText("Sign In")).click();
-        element(Selectors.byCssSelector("input[name='username']")).shouldHave(Condition.exist, Duration.ofSeconds(10));
-        element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
-        element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
-        element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
-    }
 
-    public void logOut() {
-        open(MAIN_URL);
-        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
-        element(Selectors.byLinkText("Sign Out")).click();
-    }
 
     @BeforeTest
     public void actionsBeforeTest() {
@@ -50,5 +43,20 @@ public class CommonTestConditions {
     @AfterTest
     public void actionsAfterTest() {
         // logger.info("Test " + this.getClass().getName() + " finished");
+    }
+
+    @BeforeSuite(alwaysRun = true)
+    void genesis() {
+        Configuration.browserSize = "1920x1080";
+        Configuration.timeout = 10000;
+        SelenideLogger.addListener("AllureSelenide",
+                new AllureSelenide().enableLogs(LogType.BROWSER, Level.ALL)
+        );
+
+    }
+
+    @AfterSuite(alwaysRun = true)
+    void loggingEndOfSuite() {
+
     }
 }
