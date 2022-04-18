@@ -5,13 +5,11 @@ import com.codeborne.selenide.Selectors;
 import com.github.passmesomesugar.CommonTestConditions;
 import org.testng.annotations.Test;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.element;
+import static com.codeborne.selenide.Selenide.open;
 
 public class DeleteTest extends CommonTestConditions {
-    private static final Logger logger = LogManager.getLogger(DeleteTest.class);
+    // private static final Logger logger = LogManager.getLogger(DeleteTest.class);
 
     @Test(groups = "1", description = "test site")
     public void someMethodToTestSomething() {

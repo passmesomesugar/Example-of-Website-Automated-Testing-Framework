@@ -12,7 +12,7 @@ import static com.codeborne.selenide.WebDriverConditions.urlStartingWith;
 public class MainPageURLTest extends CommonTestConditions {
     @Test(groups = "smoke", description = "checking AUT url for errors")
     public void openMainPageAndCheckURL() {
-        Configuration.timeout = URL_CHECKS_TIMEOUT;
+        //Configuration.timeout = URL_CHECKS_TIMEOUT;
         open(MAIN_URL);
         Selenide.webdriver().shouldHave(url("https://boardgamegeek.com/"));
         Selenide.webdriver().shouldNotHave(url("http://yandex.ru"));

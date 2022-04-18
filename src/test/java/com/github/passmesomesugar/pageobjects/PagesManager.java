@@ -4,7 +4,7 @@ import com.codeborne.selenide.WebDriverRunner;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class PageManager {
+public class PagesManager {
     private IndexPage indexPage;
 
     public IndexPage getIndexPage() {

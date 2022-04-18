@@ -7,9 +7,10 @@ import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SignInTest extends CommonTestConditions {
-    @Test(groups = "smoke", description = "one can sign-in and sign-out")
+    @Test(groups = "this", description = "one can sign-in and sign-out")
     public void signInAndSignOut() {
-//        open(MAIN_URL);
+        getIndexPage().openPage();
+        getIndexPage().logIn();
 //        element(Selectors.byText("Sign In")).click();
 //        element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
 //        element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);

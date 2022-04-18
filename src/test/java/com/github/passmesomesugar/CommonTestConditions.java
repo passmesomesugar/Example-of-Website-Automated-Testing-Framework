@@ -1,9 +1,8 @@
 package com.github.passmesomesugar;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import com.github.passmesomesugar.pageobjects.PagesManager;
 import com.github.passmesomesugar.services.PropertyDataReader;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.qameta.allure.selenide.LogType;
@@ -12,13 +11,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
-import java.time.Duration;
 import java.util.logging.Level;
 
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
-public class CommonTestConditions {
+public class CommonTestConditions extends PagesManager {
     public String MAIN_URL = "https://boardgamegeek.com";
     public String currentEnv = System.getProperty("env");
     public String BLANK_PAGE =
@@ -32,7 +30,6 @@ public class CommonTestConditions {
      * */
     public String userLogin = PropertyDataReader.getProperties(currentEnv).getProperty("user.login.name");
     public String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
-
 
 
     @BeforeTest
