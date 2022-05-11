@@ -1,12 +1,8 @@
 package com.github.passmesomesugar.pageobjects;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.SelenideElement;
 import com.github.passmesomesugar.CommonTestConditions;
-import org.openqa.selenium.devtools.v85.page.Page;
-
-import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
@@ -30,7 +26,7 @@ public class IndexPage extends CommonTestConditions {
         element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
     }
 
-    void logOut() {
+    public void logOut() {
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         element(Selectors.byLinkText("Sign Out")).click();
     }

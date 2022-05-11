@@ -43,17 +43,15 @@ public class CommonTestConditions extends PagesManager {
     }
 
     @BeforeSuite(alwaysRun = true)
-    void genesis() {
+    void beforeSuiteSetUp() {
         Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10000;
         SelenideLogger.addListener("AllureSelenide",
                 new AllureSelenide().enableLogs(LogType.BROWSER, Level.ALL)
         );
-
     }
 
     @AfterSuite(alwaysRun = true)
-    void loggingEndOfSuite() {
-
+    void afterSuiteSetUp() {
     }
 }

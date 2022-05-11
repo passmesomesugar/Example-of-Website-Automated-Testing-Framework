@@ -126,5 +126,5 @@ prod-env.properties
 
 *.ods#
 *.ods
-
+*.json
 /target
