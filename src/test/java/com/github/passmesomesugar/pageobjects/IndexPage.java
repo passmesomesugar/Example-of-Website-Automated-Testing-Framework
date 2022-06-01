@@ -31,4 +31,6 @@ public class IndexPage extends CommonTestConditions {
         element(Selectors.byLinkText("Sign Out")).click();
     }
 
+    public void search(String searchQuery) {
+    }
 }

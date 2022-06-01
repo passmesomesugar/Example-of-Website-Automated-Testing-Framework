@@ -2,7 +2,6 @@ package com.github.passmesomesugar.pageobject_pattern_tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
-import com.codeborne.selenide.Selenide;
 import com.github.passmesomesugar.CommonTestConditions;
 import org.testng.annotations.Test;
 
