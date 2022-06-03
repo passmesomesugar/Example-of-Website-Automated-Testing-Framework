@@ -13,7 +13,8 @@ public class IndexPage extends CommonTestConditions {
     private SelenideElement userNameButton = element(Selectors.byText(userLogin));
     private SelenideElement profileButton = element(Selectors.byXpath("//a[normalize-space(text()) = 'Profile']"));
     private SelenideElement signOutButton = element(Selectors.byLinkText("Sign Out"));
-
+    private SelenideElement BGGLogoButtonDropdown = element(Selectors.byXpath("//*[contains(@class, 'menu-logo-inner')]//button"));
+    private SelenideElement BGGLogoButtonDropdownElement = element(Selectors.byXpath("//*[contains(@class, 'menu-logo-inner')]//a[contains(text(),\"RPGGeek\")]"));
     //
 //    element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
 //    element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
@@ -43,5 +44,13 @@ public class IndexPage extends CommonTestConditions {
     public void openProfile() {
         userNameButton.click();
         profileButton.click();
+    }
+
+    public void clickBGGDropDown() {
+        BGGLogoButtonDropdown.click();
+    }
+
+    public void clickOn(String elementText) {
+        element(Selectors.byXpath("//a[normalize-space(text()) = '" + elementText + "']")).click();
     }
 }

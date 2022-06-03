@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.element;
 
-public class SignInTest extends CommonTestConditions {
-    @Test(groups = "smoke", description = "one can sign-in and sign-out")
+public class SignIn extends CommonTestConditions {
+    @Test(groups = "1", description = "one can sign-in and sign-out")
     public void signInAndSignOut() {
         getIndexPage().openPage();
         getIndexPage().logIn();
