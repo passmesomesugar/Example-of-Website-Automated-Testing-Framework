@@ -5,12 +5,13 @@ import org.testng.annotations.Test;
 
 public class EditPersonalInfoTest extends CommonTestConditions {
 
-    @Test(groups = "smoke", description = "user can return search results")
+    @Test(groups = "this", description = "user can return search results")
     public void searchResultsTest() {
         getIndexPage().openPage();
+        getIndexPage().logIn();
         getIndexPage().openProfile();
-        getProfilePage().editUserDetails();
-        getProfilePage().editUserDetails();
+        //getProfilePage().editUserDetails();
+        //getProfilePage().editUserDetails();
 
 
     }
