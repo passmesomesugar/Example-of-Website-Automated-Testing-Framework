@@ -10,6 +10,11 @@ import static com.codeborne.selenide.Selenide.open;
 public class IndexPage extends CommonTestConditions {
 
     private SelenideElement signInButton = element(Selectors.byText("Sign In"));
+    private SelenideElement userNameButton = element(Selectors.byText(userLogin));
+    private SelenideElement profileButton = element(Selectors.byXpath("//a[normalize-space(text()) = 'Profile']"));
+    private SelenideElement signOutButton = element(Selectors.byLinkText("Sign Out"));
+
+    //
 //    element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
 //    element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
 //    element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
@@ -20,17 +25,23 @@ public class IndexPage extends CommonTestConditions {
 
     public void logIn() {
         signInButton.click();
-        //element(Selectors.byCssSelector("input[name='username']")).shouldHave(Condition.exist, Duration.ofSeconds(10));
         element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
         element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
         element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
     }
 
     public void logOut() {
-        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
-        element(Selectors.byLinkText("Sign Out")).click();
+        //element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
+        userNameButton.click();
+        signOutButton.click();
     }
 
     public void search(String searchQuery) {
+
+    }
+
+    public void openProfile() {
+        userNameButton.click();
+        profileButton.click();
     }
 }

@@ -6,9 +6,15 @@ import org.testng.annotations.BeforeClass;
 
 public class PagesManager {
     private IndexPage indexPage;
+    private ProfilePage profilePage;
 
     public IndexPage getIndexPage() {
         return indexPage;
+    }
+
+
+    public ProfilePage getProfilePage() {
+        return profilePage;
     }
 
     @BeforeClass(alwaysRun = true)
