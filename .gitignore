@@ -128,3 +128,5 @@ prod-env.properties
 *.ods
 *.json
 /target
+
+allure-results/

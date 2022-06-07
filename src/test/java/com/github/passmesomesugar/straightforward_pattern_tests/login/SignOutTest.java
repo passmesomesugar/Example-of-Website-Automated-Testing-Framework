@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SignOutTest extends CommonTestConditions {
-    @Test(groups = "smoke", description = "one can sign-out")
+    @Test(groups = "smoke1", description = "one can sign-out")
     public void signInAndSignOut() {
 //        open(MAIN_URL);
 //        element(Selectors.byText("Sign In")).click();

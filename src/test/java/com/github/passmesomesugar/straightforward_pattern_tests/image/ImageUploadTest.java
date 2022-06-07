@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class ImageUploadTest extends CommonTestConditions {
 
-    @Test(groups = "smoke", description = "one can upload image", priority = 1)
+    @Test(groups = "smoke1", description = "one can upload image", priority = 1)
     public void uploadImage() {
         //logIn();
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
@@ -27,7 +27,7 @@ public class ImageUploadTest extends CommonTestConditions {
         element(Selectors.byXpath("//span[contains(.,'Upload Complete. ')]")).shouldBe(Condition.exist, Duration.ofSeconds(20));
     }
 
-    @Test(groups = "smoke", description = "one can remove uploaded picture", priority = 2)
+    @Test(groups = "smoke1", description = "one can remove uploaded picture", priority = 2)
     public void removeImage() {
         open(MAIN_URL);
         element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();

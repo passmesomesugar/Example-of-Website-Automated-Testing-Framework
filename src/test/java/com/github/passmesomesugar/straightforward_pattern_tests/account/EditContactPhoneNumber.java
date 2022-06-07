@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class EditContactPhoneNumber extends CommonTestConditions {
     String phoneNumber = StringService.getRandomPhoneNumberString(11);
 
-    @Test(groups = "smoke", description = "one can change phone number")
+    @Test(groups = "smoke1", description = "one can change phone number")
     public void editContactDetailsPhoneNumber() {
      //   logIn();
 //        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();

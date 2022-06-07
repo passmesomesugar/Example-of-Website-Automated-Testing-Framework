@@ -1,4 +1,4 @@
-package com.github.passmesomesugar.pageobject_pattern_tests;
+package com.github.passmesomesugar.pageobject_pattern_tests.search_results;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.element;
 
 public class SearchResult extends CommonTestConditions {
 
-    @Test(groups = "this", description = "user can return search results")
+    @Test(groups = "smoke", description = "user can return search results")
     public void searchResultsTest() {
         String searchQuery = "Dune";
         getIndexPage().openPage();

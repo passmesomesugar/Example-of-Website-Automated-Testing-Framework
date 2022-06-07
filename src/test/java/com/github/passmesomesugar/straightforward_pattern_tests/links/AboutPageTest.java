@@ -12,7 +12,7 @@ import static com.github.passmesomesugar.services.Scrolla.scrollUntilElementExis
 public class AboutPageTest extends CommonTestConditions {
     String pageTitle = "Welcome to BoardGameGeek | Wiki  | BoardGameGeek";
 
-    @Test(groups = "smoke", description = "one can access about page")
+    @Test(groups = "smoke1", description = "one can access about page")
     public void aboutPageTest() {
         open(MAIN_URL);
         scrollUntilElementExists(element(Selectors.byXpath("//a[text()='About']")));

@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class EditContactWebsite extends CommonTestConditions {
     String website = StringService.getRandomString(8);
 
-    @Test(groups = "smoke", description = "one can edit contact details: website")
+    @Test(groups = "smoke1", description = "one can edit contact details: website")
     public void editContactDetailsWebsite() {
 //      //  logIn();
 //        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();

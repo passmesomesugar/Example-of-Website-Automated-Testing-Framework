@@ -9,16 +9,12 @@ import static com.codeborne.selenide.WebDriverConditions.urlContaining;
 
 public class RPGGeekSiteRedirect extends CommonTestConditions {
 
-    @Test(groups = "1", description = "redirection from main page to another page")
+    @Test(groups = "smoke", description = "redirection from main page to another page")
     public void redirect() {
         getIndexPage().openPage();
         getIndexPage().logIn();
-        Selenide.sleep(5000);
         getIndexPage().clickBGGDropDown();
-        Selenide.sleep(5000);
         getIndexPage().clickOn("RPGGeek");
-        Selenide.sleep(5000);
         webdriver().shouldHave(urlContaining("rpggeek"));
-        Selenide.sleep(10000);
     }
 }

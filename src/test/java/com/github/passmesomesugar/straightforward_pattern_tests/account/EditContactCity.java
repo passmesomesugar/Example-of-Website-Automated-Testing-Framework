@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class EditContactCity extends CommonTestConditions {
     String city = StringService.getRandomString(8);
 
-    @Test(groups = "smoke", description = "one can edit contact details: city")
+    @Test(groups = "smoke1", description = "one can edit contact details: city")
     public void editContactDetailsCity() {
 //        logIn();
 //        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();

@@ -12,3 +12,5 @@ mvn -Denv=prod-env -Dselenide.holdBrowserOpen=true -Dsurefire.suiteXmlFiles=src\
  
 mvn -Denv=prod-env -Dsurefire.suiteXmlFiles=src\test\resources\this.xml  clean test
 
+mvn allure:serve
+

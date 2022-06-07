@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class EditInterests extends CommonTestConditions {
 
-    @Test(groups = "1", description = "one can edit interests")
+    @Test(groups = "smoke1", description = "one can edit interests")
     public void editInterests() {
         //  logIn();
 //        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();

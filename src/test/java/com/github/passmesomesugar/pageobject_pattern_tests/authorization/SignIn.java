@@ -1,4 +1,4 @@
-package com.github.passmesomesugar.pageobject_pattern_tests;
+package com.github.passmesomesugar.pageobject_pattern_tests.authorization;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.element;
 
 public class SignIn extends CommonTestConditions {
-    @Test(groups = "1", description = "one can sign-in and sign-out")
+    @Test(groups = "smoke", description = "one can sign-in and sign-out")
     public void signInAndSignOut() {
         getIndexPage().openPage();
         getIndexPage().logIn();

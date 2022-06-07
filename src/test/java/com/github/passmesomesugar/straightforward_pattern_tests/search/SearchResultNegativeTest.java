@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SearchResultNegativeTest extends CommonTestConditions {
-    @Test(groups = "smoke", description = "one can not retrieve search results")
+    @Test(groups = "smoke1", description = "one can not retrieve search results")
     public void searchAndRetrieveNegative() {
         String searchQuery = StringService.getRandomString(9);
         open(MAIN_URL);

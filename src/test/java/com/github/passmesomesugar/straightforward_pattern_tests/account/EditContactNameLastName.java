@@ -12,7 +12,7 @@ public class EditContactNameLastName extends CommonTestConditions {
     String firstName = StringService.getRandomString(9);
     String lastName = StringService.getRandomString(9);
 
-    @Test(groups = "smoke", description = "one can edit contact details: first and last name")
+    @Test(groups = "smoke1", description = "one can edit contact details: first and last name")
     public void editContactDetailsNameLastName() {
 //        logIn();
 //        element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();

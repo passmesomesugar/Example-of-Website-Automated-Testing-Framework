@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SignInTest extends CommonTestConditions {
-    @Test(groups = "smoke", description = "one can sign-in using valid credentials")
+    @Test(groups = "smoke1", description = "one can sign-in using valid credentials")
     public void openHomeAndSignIn() {
 //        open(MAIN_URL);
 //        element(Selectors.byText("Sign In")).click();
