@@ -9,7 +9,7 @@ import static com.codeborne.selenide.WebDriverConditions.urlContaining;
 
 public class RPGGeekSiteRedirect extends CommonTestConditions {
 
-    @Test(groups = "this", description = "redirection from main page to another page")
+    @Test(groups = "1", description = "redirection from main page to another page")
     public void redirect() {
         getIndexPage().openPage();
         getIndexPage().logIn();

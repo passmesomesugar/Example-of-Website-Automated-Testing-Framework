@@ -15,6 +15,8 @@ public class IndexPage extends CommonTestConditions {
     private SelenideElement signOutButton = element(Selectors.byLinkText("Sign Out"));
     private SelenideElement BGGLogoButtonDropdown = element(Selectors.byXpath("//*[contains(@class, 'menu-logo-inner')]//button"));
     private SelenideElement BGGLogoButtonDropdownElement = element(Selectors.byXpath("//*[contains(@class, 'menu-logo-inner')]//a[contains(text(),\"RPGGeek\")]"));
+    private SelenideElement searchBar = element(Selectors.byCssSelector("input[name='searchTerm']"));
+
     //
 //    element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
 //    element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
@@ -38,7 +40,7 @@ public class IndexPage extends CommonTestConditions {
     }
 
     public void search(String searchQuery) {
-
+        searchBar.setValue(searchQuery).pressEnter();
     }
 
     public void openProfile() {
