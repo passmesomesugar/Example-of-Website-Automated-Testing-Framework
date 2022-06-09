@@ -2,7 +2,7 @@ package com.github.passmesomesugar;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import com.github.passmesomesugar.pageobjects.PagesManager;
+import com.github.passmesomesugar.page_objects.PagesManager;
 import com.github.passmesomesugar.services.PropertyDataReader;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.qameta.allure.selenide.LogType;

@@ -1,4 +1,4 @@
-package com.github.passmesomesugar.pageobject_pattern_tests.authorization;
+package com.github.passmesomesugar.page_object_pattern_tests.authorization;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;

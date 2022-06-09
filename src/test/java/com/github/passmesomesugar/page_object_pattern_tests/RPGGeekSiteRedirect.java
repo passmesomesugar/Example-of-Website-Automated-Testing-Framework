@@ -1,6 +1,5 @@
-package com.github.passmesomesugar.pageobject_pattern_tests;
+package com.github.passmesomesugar.page_object_pattern_tests;
 
-import com.codeborne.selenide.Selenide;
 import com.github.passmesomesugar.CommonTestConditions;
 import org.testng.annotations.Test;
 

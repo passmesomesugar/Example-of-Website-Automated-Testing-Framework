@@ -1,26 +1,33 @@
-package com.github.passmesomesugar.pageobjects;
+package com.github.passmesomesugar.page_objects;
 
 import com.codeborne.selenide.WebDriverRunner;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class PagesManager {
-    private IndexPage indexPage;
-    private ProfilePage profilePage;
+    private Index indexPage;
 
-    public IndexPage getIndexPage() {
+    private Profile profilePage;
+
+    private Gallery gallery;
+
+    public Index getIndexPage() {
         return indexPage;
     }
 
+    public Gallery getGalleryPage() {
+        return gallery;
+    }
 
-    public ProfilePage getProfilePage() {
+
+    public Profile getProfilePage() {
         return profilePage;
     }
 
     @BeforeClass(alwaysRun = true)
     public void setUpPages() {
-        indexPage = new IndexPage();
-
+        indexPage = new Index();
+        gallery = new Gallery();
     }
 
     @AfterClass(alwaysRun = true)
