@@ -17,9 +17,9 @@ import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CommonTestConditions extends PagesManager {
-    public String MAIN_URL = "https://boardgamegeek.com";
-    public String currentEnv = System.getProperty("env");
-    public String BLANK_PAGE =
+    public final String MAIN_URL = "https://boardgamegeek.com";
+    public final String currentEnv = System.getProperty("env");
+    public final String BLANK_PAGE =
             System.getProperty("user.dir").concat("\\").concat("\\src\\test\\resources\\blankpage.html");
     /*
      * Please set a valid username and password in a "prod-env.properties" file and put it in "\src\test\resources".
@@ -28,9 +28,11 @@ public class CommonTestConditions extends PagesManager {
      * user.password=some_real_password
      * excluded.websites.to.check=youtube linkedin /user/ ~ or any other websites you don't want to check separated by space
      * */
-    public String userLogin = PropertyDataReader.getProperties(currentEnv).getProperty("user.login.name");
-    public String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
-
+    public final String userLogin = PropertyDataReader.getProperties(currentEnv).getProperty("user.login.name");
+    public final String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
+    public final String picture1path = PropertyDataReader.getProperties(currentEnv).getProperty("1.pic.path");
+    public final String picture2path = PropertyDataReader.getProperties(currentEnv).getProperty("2.pic.path");
+    public final String picture3path_big = PropertyDataReader.getProperties(currentEnv).getProperty("3.pic.path");
 
     @BeforeTest
     public void actionsBeforeTest() {
