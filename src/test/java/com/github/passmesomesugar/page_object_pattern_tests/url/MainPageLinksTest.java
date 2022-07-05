@@ -1,4 +1,4 @@
-package com.github.passmesomesugar.straightforward_pattern_tests.url;
+package com.github.passmesomesugar.page_object_pattern_tests.url;
 
 import com.codeborne.selenide.Selectors;
 import com.github.passmesomesugar.CommonTestConditions;
@@ -17,7 +17,7 @@ import static com.github.passmesomesugar.services.LinksParser.checkLinks;
 import static com.github.passmesomesugar.services.Scrolla.scrollUntilElementExists;
 
 public class MainPageLinksTest extends CommonTestConditions {
-
+    //Needs more refactor
     @Test(groups = "advanced", description = "parse all links on main page and check them")
     public void mainPageLinksTest() {
         open(MAIN_URL);

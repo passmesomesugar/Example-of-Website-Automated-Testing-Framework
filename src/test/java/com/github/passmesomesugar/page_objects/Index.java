@@ -1,11 +1,13 @@
 package com.github.passmesomesugar.page_objects;
 
 import com.codeborne.selenide.Selectors;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.github.passmesomesugar.CommonTestConditions;
 
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
+import static com.github.passmesomesugar.services.Scrolla.scrollUntilElementExists;
 
 public class Index extends CommonTestConditions {
 
@@ -17,7 +19,9 @@ public class Index extends CommonTestConditions {
     private SelenideElement BGGLogoButtonDropdownElement = element(Selectors.byXpath("//*[contains(@class, 'menu-logo-inner')]//a[contains(text(),\"RPGGeek\")]"));
     private SelenideElement searchBar = element(Selectors.byCssSelector("input[name='searchTerm']"));
     private SelenideElement galleryButton = element(Selectors.byText("Gallery"));
-    //
+    private SelenideElement aboutButton = element(Selectors.byText("About"));
+
+
 //    element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
 //    element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
 //    element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
@@ -59,5 +63,11 @@ public class Index extends CommonTestConditions {
     public void openGallery() {
         userNameButton.click();
         galleryButton.click();
+        Selenide.sleep(2000);
+    }
+
+    public void clickAbout() {
+        scrollUntilElementExists(aboutButton);
+        aboutButton.click();
     }
 }

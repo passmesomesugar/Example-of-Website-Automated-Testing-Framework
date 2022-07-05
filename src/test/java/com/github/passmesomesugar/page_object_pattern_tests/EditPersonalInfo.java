@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class EditPersonalInfo extends CommonTestConditions {
 
-    @Test(groups = "1", description = "user can return search results")
+    @Test(groups = "critical", description = "user can return search results")
     public void searchResultsTest() {
         getIndexPage().openPage();
         getIndexPage().logIn();
