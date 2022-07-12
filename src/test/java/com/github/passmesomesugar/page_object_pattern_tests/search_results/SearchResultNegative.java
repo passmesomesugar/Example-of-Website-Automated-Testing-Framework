@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.element;
 
 public class SearchResultNegative extends CommonTestConditions {
 
-    @Test(groups = "smoke", description = "user can return search results")
+    @Test(groups = "smoke", description = "user can not return search results for random string")
     public void searchResultsTest() {
         String searchQuery = StringService.getRandomString(9);
         getIndexPage().openPage();

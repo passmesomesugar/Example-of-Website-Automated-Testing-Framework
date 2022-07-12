@@ -30,9 +30,8 @@ public class CommonTestConditions extends PagesManager {
      * */
     public final String userLogin = PropertyDataReader.getProperties(currentEnv).getProperty("user.login.name");
     public final String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
-    public final String picture1path = PropertyDataReader.getProperties(currentEnv).getProperty("1.pic.path");
-    public final String picture2path = PropertyDataReader.getProperties(currentEnv).getProperty("2.pic.path");
-    public final String picture3path_big = PropertyDataReader.getProperties(currentEnv).getProperty("3.pic.path");
+    public final String SMALL_PICTURE_PATH = PropertyDataReader.getProperties(currentEnv).getProperty("1.pic.path");
+    public final String BIG_PICTURE_PATH = PropertyDataReader.getProperties(currentEnv).getProperty("2.pic.path");
 
     @BeforeTest
     public void actionsBeforeTest() {

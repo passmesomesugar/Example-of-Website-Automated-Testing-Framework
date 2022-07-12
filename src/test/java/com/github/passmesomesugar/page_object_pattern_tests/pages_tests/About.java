@@ -10,12 +10,11 @@ import static com.codeborne.selenide.Selenide.element;
 public class About extends CommonTestConditions {
     String pageTitle = "Welcome to BoardGameGeek | Wiki  | BoardGameGeek";
 
-    @Test(groups = "this", description = "Checking about page")
+    @Test(groups = "smoke", description = "Accessing about page")
     public void signInAndSignOut() {
         getIndexPage().openPage();
         getIndexPage().clickAbout();
         element(Selectors.byXpath("//a[text()='About']")).click();
         element("title").shouldHave(attribute("text", pageTitle));
-
     }
 }
