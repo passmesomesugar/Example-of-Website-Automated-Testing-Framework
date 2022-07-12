@@ -3,7 +3,6 @@ package com.github.passmesomesugar.page_objects;
 import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.Selenide;
 import com.github.passmesomesugar.CommonTestConditions;
-import com.github.passmesomesugar.services.PropertyDataReader;
 
 import java.io.File;
 

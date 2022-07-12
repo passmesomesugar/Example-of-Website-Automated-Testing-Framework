@@ -20,11 +20,7 @@ public class Index extends CommonTestConditions {
     private SelenideElement searchBar = element(Selectors.byCssSelector("input[name='searchTerm']"));
     private SelenideElement galleryButton = element(Selectors.byText("Gallery"));
     private SelenideElement aboutButton = element(Selectors.byText("About"));
-
-
-//    element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
-//    element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
-//    element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
+    private SelenideElement FBButton = element(Selectors.byAttribute("data-icon", "facebook-square"));
 
     public void openPage() {
         open(MAIN_URL);
@@ -38,7 +34,6 @@ public class Index extends CommonTestConditions {
     }
 
     public void logOut() {
-        //element(Selectors.byXpath("//span[text()=' " + userLogin + " ']")).click();
         userNameButton.click();
         signOutButton.click();
     }
@@ -69,5 +64,10 @@ public class Index extends CommonTestConditions {
     public void clickAbout() {
         scrollUntilElementExists(aboutButton);
         aboutButton.click();
+    }
+
+    public void clickFacebook() {
+        scrollUntilElementExists(FBButton);
+        FBButton.click();
     }
 }
