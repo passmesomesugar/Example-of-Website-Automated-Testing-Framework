@@ -16,6 +16,6 @@ public class Facebook extends CommonTestConditions {
         getIndexPage().openPage();
         getIndexPage().clickFacebook();
         Selenide.webdriver().shouldHave(urlContaining("www.facebook.com"));
-        element(Selectors.byXpath("//a[text()='BoardGameGeek']")).should(Condition.exist);
+        element(Selectors.byText("BoardGameGeek")).should(Condition.exist);
     }
 }
