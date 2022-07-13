@@ -20,7 +20,12 @@ public class Index extends CommonTestConditions {
     private SelenideElement searchBar = element(Selectors.byCssSelector("input[name='searchTerm']"));
     private SelenideElement galleryButton = element(Selectors.byText("Gallery"));
     private SelenideElement aboutButton = element(Selectors.byText("About"));
-    private SelenideElement FBButton = element(Selectors.byAttribute("data-icon", "facebook-square"));
+    private SelenideElement FacebookLink = element(Selectors.byAttribute("data-icon", "facebook-square"));
+    private SelenideElement TwitterButton = element(Selectors.byAttribute("data-icon", "twitter"));
+    private SelenideElement InstLink = element(Selectors.byAttribute("data-icon", "instagram"));
+    private SelenideElement ytLink = element(Selectors.byAttribute("data-icon", "youtube"));
+    private SelenideElement twitchLink = element(Selectors.byAttribute("data-icon", "twitch"));
+    private SelenideElement discordLink = element(Selectors.byAttribute("data-icon", "discord"));
 
     public void openPage() {
         open(MAIN_URL);
@@ -67,7 +72,32 @@ public class Index extends CommonTestConditions {
     }
 
     public void clickFacebook() {
-        scrollUntilElementExists(FBButton);
-        FBButton.click();
+        scrollUntilElementExists(FacebookLink);
+        FacebookLink.click();
+    }
+
+    public void clickTwitter() {
+        scrollUntilElementExists(TwitterButton);
+        TwitterButton.click();
+    }
+
+    public void clickInstagram() {
+        scrollUntilElementExists(InstLink);
+        InstLink.click();
+    }
+
+    public void clickYoutube() {
+        scrollUntilElementExists(ytLink);
+        ytLink.click();
+    }
+
+    public void clickTwitch() {
+        scrollUntilElementExists(twitchLink);
+        twitchLink.click();
+    }
+
+    public void clickDiscord() {
+        scrollUntilElementExists(discordLink);
+        discordLink.click();
     }
 }
