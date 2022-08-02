@@ -11,7 +11,7 @@ import static com.codeborne.selenide.WebDriverConditions.urlContaining;
 
 public class SocialMediaLinksTest extends CommonTestConditions {
 
-    @Test(groups = "this", description = "Accessing Facebook - BGG Group page")
+    @Test(groups = "smoke", description = "Accessing Facebook - BGG Group page")
     public void facebookAccess() {
         getIndexPage().openPage();
         getIndexPage().clickFacebook();
@@ -19,7 +19,7 @@ public class SocialMediaLinksTest extends CommonTestConditions {
         element(Selectors.byText("BoardGameGeek")).should(Condition.exist);
     }
 
-    @Test(groups = "this", description = "Accessing Twitter - BGG page")
+    @Test(groups = "smoke", description = "Accessing Twitter - BGG page")
     public void twitterAccess() {
         getIndexPage().openPage();
         getIndexPage().clickTwitter();
@@ -27,14 +27,14 @@ public class SocialMediaLinksTest extends CommonTestConditions {
         element(Selectors.byText("BoardGameGeek")).should(Condition.exist);
     }
 
-    @Test(groups = "this", description = "Accessing Instagram - BGG page")
+    @Test(groups = "smoke", description = "Accessing Instagram - BGG page")
     public void instagramAccess() {
         getIndexPage().openPage();
         getIndexPage().clickInstagram();
         Selenide.webdriver().shouldHave(urlContaining("instagram.com"));
     }
 
-    @Test(groups = "this", description = "Accessing YouTube - BGG page")
+    @Test(groups = "smoke", description = "Accessing YouTube - BGG page")
     public void youtubeAccess() {
         getIndexPage().openPage();
         getIndexPage().clickYoutube();
@@ -42,7 +42,7 @@ public class SocialMediaLinksTest extends CommonTestConditions {
         element(Selectors.byText("BoardGameGeek")).should(Condition.exist);
     }
 
-    @Test(groups = "this", description = "Accessing Twitch - BGG page")
+    @Test(groups = "smoke", description = "Accessing Twitch - BGG page")
     public void twitchAccess() {
         getIndexPage().openPage();
         getIndexPage().clickTwitch();
