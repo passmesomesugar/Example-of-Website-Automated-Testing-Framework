@@ -1,4 +1,4 @@
-package com.github.passmesomesugar.page_object_pattern_tests.links_to_pages_tests;
+package com.github.passmesomesugar.page_object_pattern_tests.page_links_tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.WebDriverConditions.urlContaining;
 
-public class SocialMediaLinksTest extends CommonTestConditions {
+public class SocialMediaLinks extends CommonTestConditions {
 
     @Test(groups = "smoke", description = "Accessing Facebook - BGG Group page")
     public void facebookAccess() {
@@ -49,7 +49,7 @@ public class SocialMediaLinksTest extends CommonTestConditions {
         Selenide.webdriver().shouldHave(urlContaining("https://www.twitch.tv/boardgamegeektv"));
     }
 
-    @Test(groups = "this", description = "Accessing Discord - BGG page")
+    @Test(groups = "smoke", description = "Accessing Discord - BGG page")
     public void discordAccess() {
         getIndexPage().openPage();
         getIndexPage().clickDiscord();

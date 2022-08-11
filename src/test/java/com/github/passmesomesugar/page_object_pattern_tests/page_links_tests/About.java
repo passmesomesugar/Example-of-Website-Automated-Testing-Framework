@@ -1,4 +1,4 @@
-package com.github.passmesomesugar.page_object_pattern_tests.links_to_pages_tests;
+package com.github.passmesomesugar.page_object_pattern_tests.page_links_tests;
 
 import com.github.passmesomesugar.CommonTestConditions;
 import org.testng.annotations.Test;
