@@ -5,35 +5,30 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class PagesManager {
-//    private Index indexPage;
-//
-//    private Profile profilePage;
-//
-//    private Gallery gallery;
+    private Index indexPage;
+    private Profile profilePage;
+    private Gallery gallery;
 
     public Index getIndexPage() {
-        return new Index();
+        return indexPage;
     }
 
     public Gallery getGalleryPage() {
-        return new Gallery();
+        return gallery;
     }
 
-
-//    public Profile getProfilePage() {
-//        return profilePage;
-//    }
+    public Profile getProfilePage() {
+        return profilePage;
+    }
 
     @BeforeClass(alwaysRun = true)
     public void setUpPages() {
-//        indexPage = new Index();
-//        gallery = new Gallery();
+        indexPage = new Index();
+        gallery = new Gallery();
     }
 
     @AfterClass(alwaysRun = true)
     public void afterClassActions() {
         WebDriverRunner.closeWebDriver(); // or clear cookies?
     }
-
-
 }

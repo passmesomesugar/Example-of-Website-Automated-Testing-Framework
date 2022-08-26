@@ -21,13 +21,6 @@ public class CommonTestConditions extends PagesManager {
     public final String currentEnv = System.getProperty("env");
     public final String BLANK_PAGE =
             System.getProperty("user.dir").concat("\\").concat("\\src\\test\\resources\\blankpage.html");
-    /*
-     * Please set a valid username and password in a "prod-env.properties" file and put it in "\src\test\resources".
-     * File contents:
-     * user.login.name=some_real_username
-     * user.password=some_real_password
-     * excluded.websites.to.check=youtube linkedin /user/ ~ or any other websites you don't want to check separated by space
-     * */
     public final String userLogin = PropertyDataReader.getProperties(currentEnv).getProperty("user.login.name");
     public final String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
     public final String SMALL_PICTURE_PATH = PropertyDataReader.getProperties(currentEnv).getProperty("1.pic.path");
