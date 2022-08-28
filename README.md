@@ -8,6 +8,5 @@ with the following contents:
 
 user.login.name=some_real_username  
 user.password=some_real_password  
- 
 excluded.websites.to.check=youtube linkedin /user/ ~ or any other websites you don't want to check separated by space.  
 
