@@ -9,6 +9,6 @@
         </groups>
     </test>
     <packages>
-        <package name="com.github.passmesomesugar.*"/>
+        <package name="com.github.soydivision.*"/>
     </packages>
 </suite>
