@@ -1,5 +1,9 @@
 This is a test automation project written in Java.   
-`CLI commands.txt` includes commands to run test suites with different options (headless browser for example).
+`Commands to run the project.txt` includes commands to run test suites with different options (headless browser for example).  
+Run all *sanity* tests:   
+mvn -Denv=prod-env -Dselenide.headless=true -Dsurefire.suiteXmlFiles=src\test\resources\sanity.xml clean test
+
+
 Keep in mind, above mentioned commands may not run from bash,or other   
 *nix shell due to path name (`\` vs `/`) conflict.
 
