@@ -1,4 +1,4 @@
-package com.github.soydivision.page_object_pattern_tests;
+package com.github.soydivision.tests;
 
 import com.github.soydivision.CommonTestConditions;
 import org.testng.annotations.Test;

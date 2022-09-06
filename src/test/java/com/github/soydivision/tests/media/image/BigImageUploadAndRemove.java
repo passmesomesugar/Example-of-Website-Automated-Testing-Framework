@@ -1,4 +1,4 @@
-package com.github.soydivision.page_object_pattern_tests.media.image;
+package com.github.soydivision.tests.media.image;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;

@@ -1,4 +1,4 @@
-package com.github.soydivision.page_object_pattern_tests.page_links_tests;
+package com.github.soydivision.tests.page_links_tests;
 
 import com.github.soydivision.CommonTestConditions;
 import org.testng.annotations.Test;

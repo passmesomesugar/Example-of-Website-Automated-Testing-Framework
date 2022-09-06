@@ -1,6 +1,7 @@
 package com.github.soydivision;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.github.soydivision.page_objects.PagesManager;
 import com.github.soydivision.services.PropertyDataReader;
@@ -25,6 +26,7 @@ public class CommonTestConditions extends PagesManager {
     public final String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
     public final String SMALL_PICTURE_PATH = PropertyDataReader.getProperties(currentEnv).getProperty("1.pic.path");
     public final String BIG_PICTURE_PATH = PropertyDataReader.getProperties(currentEnv).getProperty("2.pic.path");
+
 
     @BeforeTest
     public void actionsBeforeTest() {

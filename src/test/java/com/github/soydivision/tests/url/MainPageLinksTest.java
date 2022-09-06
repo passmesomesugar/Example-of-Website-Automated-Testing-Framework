@@ -1,4 +1,4 @@
-package com.github.soydivision.page_object_pattern_tests.url;
+package com.github.soydivision.tests.url;
 
 import com.codeborne.selenide.Selectors;
 import com.github.soydivision.CommonTestConditions;

@@ -1,4 +1,4 @@
-package com.github.soydivision.page_object_pattern_tests.search_results;
+package com.github.soydivision.tests.search_results;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;

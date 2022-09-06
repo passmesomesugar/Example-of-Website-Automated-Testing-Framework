@@ -26,6 +26,8 @@ public class Index extends CommonTestConditions {
     private SelenideElement ytLink = element(Selectors.byAttribute("data-icon", "youtube"));
     private SelenideElement twitchLink = element(Selectors.byAttribute("data-icon", "twitch"));
     private SelenideElement discordLink = element(Selectors.byAttribute("data-icon", "discord"));
+    private SelenideElement browserDropDown = element(Selectors.byText("Browse"));
+
 
     public void openPage() {
         open(MAIN_URL);
@@ -100,4 +102,10 @@ public class Index extends CommonTestConditions {
         scrollUntilElementExists(discordLink);
         discordLink.click();
     }
+
+    public void clickBrowseDropDown() {
+        browserDropDown.click();
+    }
+
+
 }
