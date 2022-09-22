@@ -1,4 +1,4 @@
-package com.github.soydivision.tests.redirect;
+package com.github.soydivision.tests.redirect_from_dropdown;
 
 import com.github.soydivision.CommonTestConditions;
 import org.testng.annotations.Test;
@@ -6,23 +6,21 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.urlContaining;
 
-public class BGGDropDownRedirect extends CommonTestConditions {
+public class BGG extends CommonTestConditions {
 
     @Test(groups = "this", description = "Redirection from main page to another page")
     public void redirectToRPG() {
         getIndexPage().openPage();
-        //getIndexPage().logIn();
         getIndexPage().clickBGGDropDown();
-        getIndexPage().clickOn("RPGGeek");
+        getIndexPage().clickOnByText("RPGGeek");
         webdriver().shouldHave(urlContaining("rpggeek"));
     }
 
     @Test(groups = "this", description = "Redirection from main page to another page")
     public void redirectToVGG() {
         getIndexPage().openPage();
-        //getIndexPage().logIn();
         getIndexPage().clickBGGDropDown();
-        getIndexPage().clickOn("VideoGameGeek");
+        getIndexPage().clickOnByText("VideoGameGeek");
         webdriver().shouldHave(urlContaining("videogamegeek"));
     }
 }
