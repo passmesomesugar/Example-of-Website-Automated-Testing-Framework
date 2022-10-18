@@ -17,7 +17,7 @@ import static com.github.soydivision.services.LinksParser.checkLinks;
 import static com.github.soydivision.services.Scrolla.scrollUntilElementExists;
 
 public class MainPageLinksTest extends CommonTestConditions {
-    //Needs more refactor
+    //Needs more refactor, on pause
     @Test(groups = "advanced", description = "parse all links on main page and check them")
     public void mainPageLinksTest() {
         open(MAIN_URL);

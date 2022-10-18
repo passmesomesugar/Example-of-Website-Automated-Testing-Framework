@@ -1,4 +1,4 @@
-package com.github.soydivision.straightforward_pattern_tests.account;
+package com.github.soydivision.straightforward_tests.account;
 
 import com.github.soydivision.CommonTestConditions;
 import org.testng.annotations.Test;

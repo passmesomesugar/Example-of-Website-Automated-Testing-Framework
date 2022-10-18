@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.element;
 
 public class SearchResult extends CommonTestConditions {
 
-    @Test(groups = "sanity", description = "user can return search results")
+    @Test(groups = {"sanity", "sanity"}, description = "user can return search results")
     public void searchResultsTest() {
         String searchQuery = "Dune";
         getIndexPage().openPage();

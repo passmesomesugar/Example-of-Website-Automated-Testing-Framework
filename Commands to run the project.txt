@@ -18,5 +18,7 @@ mvn -Denv=prod-env -Dsurefire.suiteXmlFiles=src\test\resources\critical.xml  cle
 
 mvn -Denv=prod-env -Dsurefire.suiteXmlFiles=src\test\resources\media.xml clean test
 
+n
+
 mvn allure:serve
 

@@ -11,7 +11,7 @@ import static com.codeborne.selenide.WebDriverConditions.urlContaining;
 
 public class SocialMediaLinks extends CommonTestConditions {
 
-    @Test(groups = "sanity", description = "Accessing Facebook - BGG Group page")
+    @Test(groups = {"sanity", "all"}, description = "Accessing Facebook - BGG Group page")
     public void facebookAccess() {
         getIndexPage().openPage();
         getIndexPage().clickFacebook();
@@ -19,7 +19,7 @@ public class SocialMediaLinks extends CommonTestConditions {
         element(Selectors.byText("BoardGameGeek")).should(Condition.exist);
     }
 
-    @Test(groups = "sanity", description = "Accessing Twitter - BGG page")
+    @Test(groups = {"sanity", "all"}, description = "Accessing Twitter - BGG page")
     public void twitterAccess() {
         getIndexPage().openPage();
         getIndexPage().clickTwitter();
@@ -27,14 +27,14 @@ public class SocialMediaLinks extends CommonTestConditions {
         element(Selectors.byText("BoardGameGeek")).should(Condition.exist);
     }
 
-    @Test(groups = "sanity", description = "Accessing Instagram - BGG page")
+    @Test(groups = {"sanity", "all"}, description = "Accessing Instagram - BGG page")
     public void instagramAccess() {
         getIndexPage().openPage();
         getIndexPage().clickInstagram();
         Selenide.webdriver().shouldHave(urlContaining("instagram.com"));
     }
 
-    @Test(groups = "sanity", description = "Accessing YouTube - BGG page")
+    @Test(groups = {"sanity", "all"}, description = "Accessing YouTube - BGG page")
     public void youtubeAccess() {
         getIndexPage().openPage();
         getIndexPage().clickYoutube();
@@ -42,14 +42,14 @@ public class SocialMediaLinks extends CommonTestConditions {
         element(Selectors.byText("BoardGameGeek")).should(Condition.exist);
     }
 
-    @Test(groups = "sanity", description = "Accessing Twitch - BGG page")
+    @Test(groups = {"sanity", "all"}, description = "Accessing Twitch - BGG page")
     public void twitchAccess() {
         getIndexPage().openPage();
         getIndexPage().clickTwitch();
         Selenide.webdriver().shouldHave(urlContaining("https://www.twitch.tv/boardgamegeektv"));
     }
 
-    @Test(groups = "sanity", description = "Accessing Discord - BGG page")
+    @Test(groups = {"sanity", "all"}, description = "Accessing Discord - BGG page")
     public void discordAccess() {
         getIndexPage().openPage();
         getIndexPage().clickDiscord();

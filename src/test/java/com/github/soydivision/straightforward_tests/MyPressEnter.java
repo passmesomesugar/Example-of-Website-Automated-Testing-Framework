@@ -1,4 +1,4 @@
-package com.github.soydivision.straightforward_pattern_tests;
+package com.github.soydivision.straightforward_tests;
 
 import com.codeborne.selenide.Command;
 import com.codeborne.selenide.SelenideElement;

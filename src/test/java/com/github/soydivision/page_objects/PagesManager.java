@@ -1,5 +1,6 @@
 package com.github.soydivision.page_objects;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -8,6 +9,8 @@ public class PagesManager {
     private Index indexPage;
     private Profile profilePage;
     private Gallery gallery;
+    public final String BLANK_PAGE =
+            System.getProperty("user.dir").concat("\\").concat("\\src\\test\\resources\\blankpage.html");
 
     public Index getIndexPage() {
         return indexPage;
@@ -29,6 +32,7 @@ public class PagesManager {
 
     @AfterClass(alwaysRun = true)
     public void afterClassActions() {
-        WebDriverRunner.closeWebDriver(); // or clear cookies?
+        Selenide.clearBrowserCookies();
+        Selenide.open(BLANK_PAGE);
     }
 }

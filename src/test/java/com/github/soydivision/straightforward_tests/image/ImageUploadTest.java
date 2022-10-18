@@ -1,4 +1,4 @@
-package com.github.soydivision.straightforward_pattern_tests.image;
+package com.github.soydivision.straightforward_tests.image;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
