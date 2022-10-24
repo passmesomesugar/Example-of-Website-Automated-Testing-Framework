@@ -8,33 +8,41 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.element;
 
 public class Browse extends CommonTestConditions {
-    @Test(groups = "this", description = "")
-    public void redirect_All_Boardgames() {
+    @Test(groups = {"sanity", "all"})
+    public void redirect_all_boardgames() {
         getIndexPage().openPage();
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("All Boardgames");
         element(Selectors.byAttribute("class", "collection_table")).should(Condition.exist);
     }
 
-    @Test(groups = "this", description = "")
-    public void redirect_Categories() {
+    @Test(groups = {"sanity", "all"})
+    public void redirect_categories() {
         getIndexPage().openPage();
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Categories");
-        // Set assertion
+        element(Selectors.byXpath("//h3[text()='Board Game Categories']")).should(Condition.exist);
+        element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = "this", description = "")
-    public void redirect_Artists() {
+    @Test(groups = {"sanity", "all"})
+    public void redirect_artists() {
         getIndexPage().openPage();
         getIndexPage().clickBrowseDropDown();
-        getIndexPage().clickOnByText("");
-        // Set assertion
+        getIndexPage().clickOnByText("Artists");
+        element(Selectors.byXpath("//h3[text()='Board Game Artists']")).should(Condition.exist);
+        element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
+    @Test(groups = {"sanity", "all"})
+    public void redirect_publishers() {
+        getIndexPage().openPage();
+        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickOnByText("Publishers");
+        element(Selectors.byXpath("//h3[text()='Board Game Publishers']")).should(Condition.exist);
+        element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
+    }
 
-//            Artists
-//    Publishers
 //            Honors
 //    Gone Cardboard
 //    Recent Additions
