@@ -28,6 +28,7 @@ public class PagesManager {
     public void setUpPages() {
         indexPage = new Index();
         gallery = new Gallery();
+        profilePage = new Profile();
     }
 
     @AfterClass(alwaysRun = true)
