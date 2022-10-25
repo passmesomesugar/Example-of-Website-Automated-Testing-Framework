@@ -49,7 +49,7 @@ public class Index extends CommonTestConditions {
         searchBar.setValue(searchQuery).pressEnter();
     }
 
-    public void openProfile() {
+    public void openProfilePage() {
         userNameButton.click();
         profileButton.click();
     }
