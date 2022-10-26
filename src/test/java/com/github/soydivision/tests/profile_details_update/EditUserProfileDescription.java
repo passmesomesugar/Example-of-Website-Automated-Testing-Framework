@@ -13,6 +13,6 @@ public class EditUserProfileDescription extends CommonTestConditions {
         getProfilePage().edit();
         getProfilePage().sendDescription("Description sample text");
         getProfilePage().submit();
-        getProfilePage().checkUpdateSuccessMessage();
+        getProfilePage().checkSuccessfulUpdateMessage();
     }
 }

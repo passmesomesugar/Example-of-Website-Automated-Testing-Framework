@@ -27,7 +27,7 @@ public class Profile extends CommonTestConditions {
         submit.click();
     }
 
-    public void checkUpdateSuccessMessage() {
+    public void checkSuccessfulUpdateMessage() {
         profileUpdateSuccessText.should(Condition.exist);
     }
 }

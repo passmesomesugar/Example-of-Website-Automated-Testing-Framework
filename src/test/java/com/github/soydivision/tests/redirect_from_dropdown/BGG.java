@@ -8,7 +8,7 @@ import static com.codeborne.selenide.WebDriverConditions.urlContaining;
 
 public class BGG extends CommonTestConditions {
 
-    @Test(groups = {"sanity", "all"}, description = "Redirection from main page to another page")
+    @Test(groups = {"sanity", "all"}, description = "")
     public void redirectToRPG() {
         getIndexPage().openPage();
         getIndexPage().clickBGGDropDown();
@@ -16,7 +16,7 @@ public class BGG extends CommonTestConditions {
         webdriver().shouldHave(urlContaining("rpggeek"));
     }
 
-    @Test(groups = {"sanity", "all"}, description = "Redirection from main page to another page")
+    @Test(groups = {"sanity", "all"}, description = "")
     public void redirectToVGG() {
         getIndexPage().openPage();
         getIndexPage().clickBGGDropDown();
