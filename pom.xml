@@ -10,7 +10,7 @@
 
     <name>selenide_test_project_testng</name>
     <!-- FIXME change it to the project's website -->
-    <url>https://github.com/passmesomesugar/Example-of-Website-Automated-Testing-Framework</url>
+    <url>https://github.com/soydivision/boardgamegeek.com-Test-Automation-Project</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
