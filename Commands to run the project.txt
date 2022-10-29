@@ -20,3 +20,4 @@ mvn -Denv=prod-env -Dsurefire.suiteXmlFiles=src\test\resources\media.xml clean t
 
 mvn allure:serve
 
+mvn io.qameta.allure:allure-maven:serve

@@ -131,3 +131,4 @@ prod-env.properties
 /target
 
 allure-results/
+.allure/
