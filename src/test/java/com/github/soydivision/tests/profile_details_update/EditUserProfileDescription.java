@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.element;
 
 public class EditUserProfileDescription extends CommonTestConditions {
 
-    @Test(groups = "this", priority = 0)
+    @Test(groups = {"sanity", "all"}, priority = 0)
     public void addUserProfileDescription() {
         getIndexPage().openPage();
         getIndexPage().logIn();
@@ -21,7 +21,7 @@ public class EditUserProfileDescription extends CommonTestConditions {
         element(Selectors.byText("Description sample text")).should(Condition.exist);
     }
 
-    @Test(groups = "this", priority = 1)
+    @Test(groups = {"sanity", "all"}, priority = 1)
     public void removeUserProfileDescription() {
         getProfilePage().editUserProfile();
         getProfilePage().sendDescription();
