@@ -27,5 +27,6 @@ public class EditUserProfileDescription extends CommonTestConditions {
         getProfilePage().sendDescription();
         getProfilePage().submit();
         getProfilePage().checkSuccessfulUpdateMessage();
+        element(Selectors.byText("Description sample text")).shouldNot(Condition.exist);
     }
 }
