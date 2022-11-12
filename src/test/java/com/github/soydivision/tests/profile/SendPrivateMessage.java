@@ -2,7 +2,6 @@ package com.github.soydivision.tests.profile;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
-import com.codeborne.selenide.Selenide;
 import com.github.soydivision.CommonTestConditions;
 import org.testng.annotations.Test;
 
@@ -19,11 +18,9 @@ public class SendPrivateMessage extends CommonTestConditions {
         getIndexPage().logIn();
         getIndexPage().openProfilePage();
         getProfilePage().sendPrivateMessage();
-        Selenide.sleep(3000);
         getProfilePage().setSubject(mailSubject);
         getProfilePage().sendText(mailText);
         getProfilePage().sendMessage();
-        Selenide.sleep(5000);
         getIndexPage().clickOnMail();
         element(Selectors.byText(mailSubject)).should(Condition.exist);
         element(Selectors.byText(mailSubject)).click();
