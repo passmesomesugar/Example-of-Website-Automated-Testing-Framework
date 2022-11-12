@@ -11,8 +11,8 @@ Run *all* tests:
 Keep in mind, above mentioned commands may not run from bash,or other   
 *nix shell due to path name (`\` vs `/`) conflict.
 
-Please set a valid username and password in a "prod-env.properties" file and put it in "\src\test\resources",  
-with the following contents:        
+Please ensure to set a valid username and password in a "prod-env.properties" file and put it in "\src\test\resources",  
+with the following contents in order for tests to run:        
 
 user.login.name=some_real_username  
 user.password=some_real_password  
