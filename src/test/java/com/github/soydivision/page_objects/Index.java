@@ -27,7 +27,7 @@ public class Index extends CommonTestConditions {
     private SelenideElement twitchLink = element(Selectors.byAttribute("data-icon", "twitch"));
     private SelenideElement discordLink = element(Selectors.byAttribute("data-icon", "discord"));
     private SelenideElement browserDropDown = element(Selectors.byText("Browse"));
-
+    private SelenideElement mail = element(Selectors.byAttribute("data-icon", "envelope"));
 
     public void openPage() {
         open(MAIN_URL);
@@ -106,4 +106,10 @@ public class Index extends CommonTestConditions {
     public void clickBrowseDropDown() {
         browserDropDown.click();
     }
+
+    public void clickOnMail() {
+        mail.click();
+    }
+
+
 }
