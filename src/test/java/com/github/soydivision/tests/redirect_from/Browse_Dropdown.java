@@ -1,4 +1,4 @@
-package com.github.soydivision.tests.redirect_from_dropdown;
+package com.github.soydivision.tests.redirect_from;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
@@ -7,21 +7,21 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.element;
 
-public class Browse extends CommonTestConditions {
+public class Browse_Dropdown extends CommonTestConditions {
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"}, priority = -1)
     public void accessIndexPage() {
         getIndexPage().openPage();
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browseAllBoardgames() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("All Boardgames");
         element(Selectors.byAttribute("class", "collection_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browseCategories() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Categories");
@@ -29,7 +29,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browseArtists() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Artists");
@@ -37,7 +37,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browsePublishers() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Publishers");
@@ -45,7 +45,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browseHonors() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Honors");
@@ -53,7 +53,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browseGoneCardboard() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Gone Cardboard");
@@ -61,7 +61,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byAttribute("id", "maincontent")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browseRecentAdditions() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Recent Additions");
@@ -69,7 +69,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browsePreviews() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Recent Additions");
@@ -77,7 +77,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browseFamilies() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Families");
@@ -85,7 +85,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browseMechanics() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Mechanics");
@@ -93,7 +93,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byAttribute("id", "maincontent")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browseDesigners() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Designers");
@@ -101,7 +101,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byAttribute("id", "maincontent")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browseAccessories() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Accessories");
@@ -109,7 +109,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byAttribute("id", "maincontent")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browseRandomGame() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Random Game");
@@ -128,7 +128,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byText("More")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browsePodcasts() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Accessories");
@@ -136,7 +136,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byAttribute("id", "maincontent")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"}, priority = 1)
+    @Test(groups = {"sanity", "all"})
     public void browseWiki() {
         getIndexPage().clickBrowseDropDown();
         getIndexPage().clickOnByText("Wiki");
