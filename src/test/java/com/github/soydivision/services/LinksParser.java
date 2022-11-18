@@ -26,7 +26,6 @@ public class LinksParser {
         List<String> linksArrayList = new ArrayList<>();
         for (WebElement link : links) {
             if (link.getAttribute("href") != null || link.getAttribute("href") != "") {
-//                System.out.println("`" + link.getAttribute("href") + "`");
                 linksArrayList.add(link.getAttribute("href"));
             }
         }
@@ -44,7 +43,6 @@ public class LinksParser {
                 isValidLink = isLinkValidCheckInATab(url);
             } else {
                 isValidLink = true;
-                //LOGGER.info("link: " + url + " is valid");
                 System.out.println(url + " is valid");
             }
             return isValidLink;
@@ -72,7 +70,6 @@ public class LinksParser {
                 }
             } catch (IOException exception) {
                 exception.printStackTrace();
-                //LOGGER.error("isValidLinkCheckingWithRequestMethod failed due to IOException" + exception.getMessage());
             }
         }
         httpURLConnection = null;
@@ -122,11 +119,9 @@ public class LinksParser {
             if (!isValidLink(link)) {
                 brokenLinks.add(link);
             } else {
-                //System.out.println("Valid link: " + link);
             }
         }
         if (!brokenLinks.isEmpty()) {
-            //LOGGER.info("Broken links are:" + brokenLinks);
         }
         return (ArrayList<String>) brokenLinks;
     }

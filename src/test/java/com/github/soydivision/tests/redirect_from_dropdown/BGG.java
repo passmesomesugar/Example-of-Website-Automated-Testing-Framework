@@ -1,4 +1,4 @@
-package com.github.soydivision.tests.redirect_from;
+package com.github.soydivision.tests.redirect_from_dropdown;
 
 import com.github.soydivision.CommonTestConditions;
 import org.testng.annotations.Test;
@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.urlContaining;
 
-public class BGG_Dropdown extends CommonTestConditions {
+public class BGG extends CommonTestConditions {
 
     @Test(groups = {"sanity", "all"}, description = "")
     public void redirectToRPG() {

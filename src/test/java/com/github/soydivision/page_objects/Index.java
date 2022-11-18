@@ -111,5 +111,7 @@ public class Index extends CommonTestConditions {
         mail.click();
     }
 
-
+    public void clickDropdownByName(String value) {
+        element(Selectors.byXpath("//button[normalize-space()='" + value + "']")).click();
+    }
 }

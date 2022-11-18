@@ -1,4 +1,4 @@
-package com.github.soydivision.tests.redirect_from;
+package com.github.soydivision.tests.redirect_from_dropdown;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
@@ -7,111 +7,111 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.element;
 
-public class Browse_Dropdown extends CommonTestConditions {
+public class Browse extends CommonTestConditions {
 
-    @Test(groups = {"sanity", "all"}, priority = -1)
+    @Test(groups = {"this", "all"}, priority = -1)
     public void accessIndexPage() {
         getIndexPage().openPage();
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browseAllBoardgames() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("All Boardgames");
         element(Selectors.byAttribute("class", "collection_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browseCategories() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Categories");
         element(Selectors.byText("Board Game Categories")).should(Condition.exist);
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browseArtists() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Artists");
         element(Selectors.byText("Board Game Artists")).should(Condition.exist);
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browsePublishers() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Publishers");
         element(Selectors.byText("Board Game Publishers")).should(Condition.exist);
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browseHonors() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Honors");
         element(Selectors.byText("Board Game Honors")).should(Condition.exist);
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browseGoneCardboard() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Gone Cardboard");
         element(Selectors.byText("Gone Cardboard listings")).should(Condition.exist);
         element(Selectors.byAttribute("id", "maincontent")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browseRecentAdditions() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Recent Additions");
         element(Selectors.byText("Recent Additions")).should(Condition.exist);
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browsePreviews() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Recent Additions");
         element(Selectors.byText("Recent Additions")).should(Condition.exist);
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browseFamilies() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Families");
         element(Selectors.byText("Families")).should(Condition.exist);
         element(Selectors.byAttribute("class", "forum_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browseMechanics() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Mechanics");
         element(Selectors.byText("Mechanics")).should(Condition.exist);
         element(Selectors.byAttribute("id", "maincontent")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browseDesigners() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Designers");
         element(Selectors.byText("Board Game Designers")).should(Condition.exist);
         element(Selectors.byAttribute("id", "maincontent")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browseAccessories() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Accessories");
         element(Selectors.byText("Accessory Rank")).should(Condition.exist);
         element(Selectors.byAttribute("id", "maincontent")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browseRandomGame() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Random Game");
         element(Selectors.byText("Overview")).should(Condition.exist);
         element(Selectors.byText("Description")).should(Condition.exist);
@@ -128,17 +128,17 @@ public class Browse_Dropdown extends CommonTestConditions {
         element(Selectors.byText("More")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browsePodcasts() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Accessories");
         element(Selectors.byText("Accessories")).should(Condition.exist);
         element(Selectors.byAttribute("id", "maincontent")).should(Condition.exist);
     }
 
-    @Test(groups = {"sanity", "all"})
+    @Test(groups = {"this", "all"})
     public void browseWiki() {
-        getIndexPage().clickBrowseDropDown();
+        getIndexPage().clickDropdownByName("Browse");
         getIndexPage().clickOnByText("Wiki");
         element(Selectors.byText("Index")).should(Condition.exist);
         element(Selectors.byAttribute("id", "maincontent")).should(Condition.exist);

@@ -26,7 +26,6 @@ public class Gallery extends CommonTestConditions {
         element(Selectors.byXpath("//gg-image-browser//gg-image")).click();
         element(Selectors.byXpath("//button[text()=' Edit ']")).click();
         element(Selectors.byXpath("//button[text()=' Delete Image ']")).click();
-        //element(Selectors.byXpath("//button[text()=' Yes, Delete Image ']")).click();
         element(Selectors.byText("Yes, Delete Image")).click();
         element(Selectors.byXpath("//*[contains(text(),' Image deleted. Redirecting... ')]")).should(Condition.exist, Duration.ofSeconds(30));
     }
