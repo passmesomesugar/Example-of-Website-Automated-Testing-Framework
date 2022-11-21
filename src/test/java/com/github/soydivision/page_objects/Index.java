@@ -17,7 +17,7 @@ public class Index extends CommonTestConditions {
     private SelenideElement signOutButton = element(Selectors.byLinkText("Sign Out"));
     private SelenideElement BGGLogoButtonDropdown = element(Selectors.byXpath("//*[contains(@class, 'menu-logo-inner')]//button"));
     private SelenideElement BGGLogoButtonDropdownElement = element(Selectors.byXpath("//*[contains(@class, 'menu-logo-inner')]//a[contains(text(),\"RPGGeek\")]"));
-    private SelenideElement searchBar = element(Selectors.byCssSelector("//input[@name='searchTerm']"));
+    private SelenideElement searchBar = element(Selectors.byXpath("//input[@placeholder='Search']"));
     private SelenideElement galleryButton = element(Selectors.byText("Gallery"));
     private SelenideElement aboutButton = element(Selectors.byText("About"));
     private SelenideElement FacebookLink = element(Selectors.byAttribute("data-icon", "facebook-square"));
