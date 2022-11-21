@@ -13,8 +13,10 @@ public class Forums extends CommonTestConditions {
         getIndexPage().openPage();
         getIndexPage().clickDropdownByName("Forums");
         getIndexPage().clickOnByText("All Forums");
-        Selenide.element(Selectors.byXpath("//h2[contains(., 'Forums')]")).should(Condition.exist);
+        Selenide.element(Selectors.byText("Forums")).should(Condition.exist);
     }
+
+//
 
 
     //    All Forums

@@ -13,6 +13,8 @@ import java.util.logging.Level;
 public class CommonTestConditions extends PagesManager {
     public final String MAIN_URL = "https://boardgamegeek.com";
     public final String currentEnv = System.getProperty("env");
+    public final String mockData = System.getProperty("data");
+    public final String userCredentials = System.getProperty("user-credentials");
 
     public final String userLogin = PropertyDataReader.getProperties(currentEnv).getProperty("user.login.name");
     public final String userPassword = PropertyDataReader.getProperties(currentEnv).getProperty("user.password");
