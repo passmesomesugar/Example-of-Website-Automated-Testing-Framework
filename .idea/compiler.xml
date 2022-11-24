@@ -9,6 +9,7 @@
         <module name="Showcase Testing Framework" />
         <module name="selenide_test_project_testng" />
         <module name="showcase_testing_framework" />
+        <module name="boardgamegeek.com_testing_project" />
         <module name="Selenide-Test-NG-Blank-project" />
         <module name="Showcase testing framework" />
       </profile>

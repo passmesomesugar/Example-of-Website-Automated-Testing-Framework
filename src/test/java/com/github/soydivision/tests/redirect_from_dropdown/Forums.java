@@ -8,31 +8,25 @@ import org.testng.annotations.Test;
 
 public class Forums extends CommonTestConditions {
 
-    @Test(groups = {"1", "all"}, priority = -1)
-    public void allForums() {
-        getIndexPage().openPage();
-        getIndexPage().clickButtonByName("Forums");
-        getIndexPage().clickByText("All Forums");
-        Selenide.element(Selectors.byText("Forums")).should(Condition.exist);
-        Selenide.sleep(5000);
-    }
-
-
-    @Test(groups = {"1", "all"})
-    public void forumsRecent() {
-        getIndexPage().clickButtonByName("Forums");
-        getIndexPage().clickByText("Recent");
-        Selenide.element(Selectors.byText("Forums")).should(Condition.exist);
-        Selenide.sleep(5000);
-    }
-
-    @Test(groups = {"1", "all"})
-    public void forumsSearch() {
-        getIndexPage().clickButtonByName("Forums");
-        getIndexPage().clickByText("Search");
-        Selenide.element(Selectors.byText("Forums")).should(Condition.exist);
-        Selenide.sleep(5000);
-    }
+//    @Test(groups = {"1", "all"}, priority = -1)
+//    public void allForums() {
+//        getIndexPage().openPage();
+//        getIndexPage().clickButtonByName("Forums");
+//        getIndexPage().clickByText("All Forums");
+//    }
+//
+//
+//    @Test(groups = {"1", "all"})
+//    public void forumsRecent() {
+//        getIndexPage().clickButtonByName("Forums");
+//        getIndexPage().clickByText("Recent");
+//    }
+//
+//    @Test(groups = {"1", "all"})
+//    public void forumsSearch() {
+//        getIndexPage().clickButtonByName("Forums");
+//        getIndexPage().clickByText("Search");
+//    }
 
 //
 
