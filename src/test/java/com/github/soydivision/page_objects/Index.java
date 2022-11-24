@@ -58,7 +58,7 @@ public class Index extends CommonTestConditions {
         BGGLogoButtonDropdown.click();
     }
 
-    public void clickOnByText(String elementText) {
+    public void clickByText(String elementText) {
         element(Selectors.byXpath("//a[normalize-space(text()) = '" + elementText + "']")).click();
     }
 
@@ -111,7 +111,7 @@ public class Index extends CommonTestConditions {
         mail.click();
     }
 
-    public void clickDropdownByName(String value) {
+    public void clickButtonByName(String value) {
         element(Selectors.byXpath("//button[normalize-space()='" + value + "']")).click();
     }
 }

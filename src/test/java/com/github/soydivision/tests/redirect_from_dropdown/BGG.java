@@ -12,7 +12,7 @@ public class BGG extends CommonTestConditions {
     public void redirectToRPG() {
         getIndexPage().openPage();
         getIndexPage().clickBGGDropDown();
-        getIndexPage().clickOnByText("RPGGeek");
+        getIndexPage().clickByText("RPGGeek");
         webdriver().shouldHave(urlContaining("rpggeek"));
     }
 
@@ -20,7 +20,7 @@ public class BGG extends CommonTestConditions {
     public void redirectToVGG() {
         getIndexPage().openPage();
         getIndexPage().clickBGGDropDown();
-        getIndexPage().clickOnByText("VideoGameGeek");
+        getIndexPage().clickByText("VideoGameGeek");
         webdriver().shouldHave(urlContaining("videogamegeek"));
     }
 }

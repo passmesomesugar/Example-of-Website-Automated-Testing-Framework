@@ -6,9 +6,13 @@ import com.github.soydivision.page_objects.PagesManager;
 import com.github.soydivision.services.PropertyDataReader;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.qameta.allure.selenide.LogType;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeSuite;
 
 import java.util.logging.Level;
+
+import static com.codeborne.selenide.Selenide.clearBrowserCookies;
+import static com.codeborne.selenide.Selenide.open;
 
 public class CommonTestConditions extends PagesManager {
     public final String MAIN_URL = "https://boardgamegeek.com";
@@ -28,5 +32,11 @@ public class CommonTestConditions extends PagesManager {
         SelenideLogger.addListener("AllureSelenide",
                 new AllureSelenide().enableLogs(LogType.BROWSER, Level.ALL)
         );
+    }
+
+    @AfterClass(alwaysRun = true)
+    public void clearBrowser() {
+        clearBrowserCookies();
+        open(BLANK_PAGE);
     }
 }

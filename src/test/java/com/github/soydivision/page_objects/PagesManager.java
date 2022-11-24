@@ -1,10 +1,6 @@
 package com.github.soydivision.page_objects;
 
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
-import static com.codeborne.selenide.Selenide.clearBrowserCookies;
-import static com.codeborne.selenide.Selenide.open;
 
 public class PagesManager {
     private Index indexPage;
@@ -30,11 +26,5 @@ public class PagesManager {
         indexPage = new Index();
         gallery = new Gallery();
         profilePage = new Profile();
-    }
-
-    @AfterClass(alwaysRun = true)
-    public void refreshBrowser() {
-        clearBrowserCookies();
-        open(BLANK_PAGE);
     }
 }
