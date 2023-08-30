@@ -1,10 +1,6 @@
 package com.github.soydivision.tests.redirect_from_dropdown;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selectors;
-import com.codeborne.selenide.Selenide;
 import com.github.soydivision.CommonTestConditions;
-import org.testng.annotations.Test;
 
 public class Forums extends CommonTestConditions {
 

@@ -11,21 +11,19 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class Browse extends CommonTestConditions {
 
-    int MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE = 2;
-
-    @Test(groups = {"this", "all"}, priority = -1)
+    @Test(groups = {"sanity", "all"}, priority = -1)
     public void accessIndexPage() {
         getIndexPage().openPage();
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browseAllBoardgames() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("All Boardgames");
         element(Selectors.byAttribute("class", "collection_table")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browseCategories() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Categories");
@@ -34,7 +32,7 @@ public class Browse extends CommonTestConditions {
         Assert.assertTrue(elementsCollection.size() > MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browseArtists() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Artists");
@@ -43,7 +41,7 @@ public class Browse extends CommonTestConditions {
         Assert.assertTrue(elementsCollection.size() > MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browsePublishers() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Publishers");
@@ -52,7 +50,7 @@ public class Browse extends CommonTestConditions {
         Assert.assertTrue(elementsCollection.size() > MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browseHonors() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Honors");
@@ -61,7 +59,7 @@ public class Browse extends CommonTestConditions {
         Assert.assertTrue(elementsCollection.size() > MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browseGoneCardboard() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Gone Cardboard");
@@ -71,7 +69,7 @@ public class Browse extends CommonTestConditions {
         Assert.assertTrue(elementsCollection.size() > MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browseRecentAdditions() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Recent Additions");
@@ -81,7 +79,7 @@ public class Browse extends CommonTestConditions {
         Assert.assertTrue(elementsCollection.size() > MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browsePreviews() {
         getIndexPage().openPage();
         getIndexPage().clickButtonByName("Browse");
@@ -91,7 +89,7 @@ public class Browse extends CommonTestConditions {
         Assert.assertTrue(elementsCollection.size() > MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browseFamilies() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Families");
@@ -100,7 +98,7 @@ public class Browse extends CommonTestConditions {
         Assert.assertTrue(elementsCollection.size() > MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browseMechanics() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Mechanics");
@@ -109,7 +107,7 @@ public class Browse extends CommonTestConditions {
         Assert.assertTrue(elementsCollection.size() > MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browseDesigners() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Designers");
@@ -118,7 +116,7 @@ public class Browse extends CommonTestConditions {
         Assert.assertTrue(elementsCollection.size() > MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browseAccessories() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Accessories");
@@ -127,7 +125,7 @@ public class Browse extends CommonTestConditions {
         Assert.assertTrue(elementsCollection.size() > MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browseRandomGame() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Random Game");
@@ -146,7 +144,7 @@ public class Browse extends CommonTestConditions {
         element(Selectors.byText("More")).should(Condition.exist);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browsePodcasts() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Accessories");
@@ -156,7 +154,7 @@ public class Browse extends CommonTestConditions {
         Assert.assertTrue(elementsCollection.size() > MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE);
     }
 
-    @Test(groups = {"this", "all"})
+    @Test(groups = {"sanity", "all"})
     public void browseWiki() {
         getIndexPage().clickButtonByName("Browse");
         getIndexPage().clickByText("Wiki");

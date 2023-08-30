@@ -1,7 +1,6 @@
 package com.github.soydivision.tests.search_results;
 
 import com.github.soydivision.CommonTestConditions;
-import org.testng.annotations.Test;
 
 public class InForums extends CommonTestConditions {
 

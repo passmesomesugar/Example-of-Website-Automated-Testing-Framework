@@ -2,11 +2,11 @@ This is a test automation project written in Java.
 `Commands to run the project.txt` includes commands to run test suites with different options (headless browser for example).  
 Run *sanity* tests:   
 
-`mvn -Denv=prod-env -Dselenide.headless=true -Dsurefire.suiteXmlFiles=src\test\resources\sanity.xml clean test`
+`mvn -Dselenide.headless=true -Dgroups=sanity clean test`
 
 Run *all* tests:   
 
-`mvn -Denv=prod-env -Dselenide.headless=true -Dsurefire.suiteXmlFiles=src\test\resources\all.xml clean test`
+`mvn -Dgroups=all clean test`
 
 Keep in mind, above mentioned commands may not run from bash,or other   
 *nix shell due to path name (`\` vs `/`) conflict.
