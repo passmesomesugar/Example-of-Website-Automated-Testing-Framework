@@ -1,1 +1,3 @@
 mvn -Dgroups=this clean test 
+
+mvn -Dgroups=api clean test 

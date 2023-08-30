@@ -7,17 +7,20 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class GameSearchTest {
+public class GameSearchByNameTest extends APIBaseTest {
 
-    @Test
-    void gameSearchViaApi() {
-        RestAssured.baseURI = "https://api.geekdo.com/xmlapi";
+    String GAME = "Fische Fluppen Frikadellen";
+    String YEARPUBLISHED = "2002";
+
+    @Test(groups = "api")
+    void gameSearchByNameTest() {
+       // RestAssured.baseURI = BASE_URI;
         given().accept(ContentType.XML)
                 .when().get("/search?search=frika")
                 .then().assertThat()
-                .body("boardgames.boardgame.name", Matchers.equalTo("Fische Fluppen Frikadellen"))
+                .body("boardgames.boardgame.name", Matchers.equalTo(GAME))
                 .and().assertThat()
                 .body("boardgames.boardgame.yearpublished",
-                        Matchers.equalTo("2002"));
+                        Matchers.equalTo(YEARPUBLISHED));
     }
 }
