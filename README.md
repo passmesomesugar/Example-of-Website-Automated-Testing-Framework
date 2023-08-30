@@ -8,8 +8,12 @@ Run *all* tests:
 
 `mvn -Dgroups=all clean test`
 
+Run *api* tests:   
+
+`mvn -Dgroups=api clean test` 
+
 Keep in mind, above mentioned commands may not run from bash,or other   
-*nix shell due to path name (`\` vs `/`) conflict.
+*nix systems shell due to path name (`\` vs `/`) conflict.
 
 Please ensure to set a valid username and password in a "prod-env.properties" file and put it in "\src\test\resources",  
 with the following contents in order for tests to run:        
