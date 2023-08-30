@@ -16,6 +16,8 @@ public class CommonTestConditions extends PagesManager {
     public final String userLogin = PropertyDataReader.getProperties(propFile).getProperty("user.login.name");
     public final String userPassword = PropertyDataReader.getProperties(propFile).getProperty("user.password");
     public int MINIMAL_NUMBER_OF_ELEMENTS_IN_TABLE = 2;
+    public int IMAGE_UPLOAD_TIMEOUT = 2000;
+
 
     @BeforeSuite(alwaysRun = true)
     void beforeSuiteSetUp() {

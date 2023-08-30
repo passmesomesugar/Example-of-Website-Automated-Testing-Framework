@@ -14,14 +14,13 @@ public class SmallImageUploadAndRemoveTest extends CommonTestConditions {
         getIndexPage().logIn();
         getIndexPage().openGallery();
         getGalleryPage().uploadImage(SMALL_PICTURE_PATH);
-        Selenide.sleep(4000);
+        Selenide.sleep(IMAGE_UPLOAD_TIMEOUT);
     }
 
     @Test(groups = "", description = "user can remove small image", priority = 2)
     public void removeBigImage() {
         getIndexPage().openGallery();
         getGalleryPage().removeImage();
-        Selenide.sleep(4000);
-
+        Selenide.sleep(IMAGE_UPLOAD_TIMEOUT);
     }
 }

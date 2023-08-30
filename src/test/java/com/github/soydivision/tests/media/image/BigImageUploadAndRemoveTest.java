@@ -14,7 +14,7 @@ public class BigImageUploadAndRemoveTest extends CommonTestConditions {
         getIndexPage().logIn();
         getIndexPage().openGallery();
         getGalleryPage().uploadImage(BIG_PICTURE_PATH);
-        Selenide.sleep(4000);
+        Selenide.sleep(IMAGE_UPLOAD_TIMEOUT);
 
     }
 
@@ -22,7 +22,7 @@ public class BigImageUploadAndRemoveTest extends CommonTestConditions {
     public void removeBigImage() {
         getIndexPage().openGallery();
         getGalleryPage().removeImage();
-        Selenide.sleep(4000);
+        Selenide.sleep(IMAGE_UPLOAD_TIMEOUT);
 
     }
 }

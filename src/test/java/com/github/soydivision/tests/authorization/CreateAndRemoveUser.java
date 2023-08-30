@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 //https://10minemail.com/
 
 public class CreateAndRemoveUser extends CommonTestConditions {
-    @Test(groups = {"this", "all"}, description = "")
+    @Test(groups = "all", description = "")
     public void registerNewUser() {
         Configuration.timeout = 15000;
         getTempMailOrg().openPage();
@@ -25,8 +25,5 @@ public class CreateAndRemoveUser extends CommonTestConditions {
         System.out.println(clipboard().getText());
         System.out.println("**************************");
         Selenide.sleep(8000);
-
-
-        //
     }
 }

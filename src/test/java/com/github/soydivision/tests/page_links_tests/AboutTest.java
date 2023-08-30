@@ -6,10 +6,10 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Selenide.element;
 
-public class About extends CommonTestConditions {
+public class AboutTest extends CommonTestConditions {
     String PAGE_TITLE = "Welcome to BoardGameGeek | Wiki  | BoardGameGeek";
 
-    @Test(groups = {"sanity", "all"}, description = "Accessing about page")
+    @Test(groups = {"sanity", "all", "this"}, description = "Accessing about page")
     public void signInAndSignOut() {
         getIndexPage().openPage();
         getIndexPage().clickAbout();
