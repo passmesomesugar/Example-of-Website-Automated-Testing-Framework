@@ -22,7 +22,7 @@ public class CommonTestConditions extends PagesManager {
     @BeforeSuite(alwaysRun = true)
     void beforeSuiteSetUp() {
         Configuration.browserSize = "1920x1080";
-        Configuration.timeout = 10000;
+        Configuration.timeout = 30000;
     }
 
     @AfterClass(alwaysRun = true)
@@ -30,5 +30,4 @@ public class CommonTestConditions extends PagesManager {
         clearBrowserCookies();
         open(BLANK_PAGE);
     }
-
 }

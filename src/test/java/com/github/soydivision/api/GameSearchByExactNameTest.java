@@ -1,6 +1,5 @@
 package com.github.soydivision.api;
 
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;

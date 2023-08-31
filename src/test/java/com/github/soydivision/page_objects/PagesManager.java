@@ -6,7 +6,7 @@ public class PagesManager {
     private Index indexPage;
     private Profile profilePage;
     private Gallery gallery;
-    private TempMailOrg tempMailOrg;
+    private TempMailPage tempMailPage;
     public final String BLANK_PAGE =
             System.getProperty("user.dir").concat("\\").concat("\\src\\test\\resources\\blankpage.html");
 
@@ -22,8 +22,8 @@ public class PagesManager {
         return profilePage;
     }
 
-    public TempMailOrg getTempMailOrg() {
-        return tempMailOrg;
+    public TempMailPage getTempMailPage() {
+        return tempMailPage;
     }
 
     @BeforeClass(alwaysRun = true)
@@ -31,6 +31,6 @@ public class PagesManager {
         indexPage = new Index();
         gallery = new Gallery();
         profilePage = new Profile();
-        tempMailOrg = new TempMailOrg();
+        tempMailPage = new TempMailPage();
     }
 }

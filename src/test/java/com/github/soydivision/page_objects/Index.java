@@ -1,12 +1,12 @@
 package com.github.soydivision.page_objects;
 
+import com.codeborne.selenide.ClickOptions;
 import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.github.soydivision.CommonTestConditions;
 
-import static com.codeborne.selenide.Selenide.element;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static com.github.soydivision.services.Scrolla.scrollUntilElementExists;
 
 public class Index extends CommonTestConditions {
@@ -29,16 +29,23 @@ public class Index extends CommonTestConditions {
     private SelenideElement browserDropDown = element(Selectors.byText("Browse"));
     private SelenideElement mail = element(Selectors.byAttribute("data-icon", "envelope"));
 
+
     public void openPage() {
         open(MAIN_URL);
     }
 
     public void logIn() {
-        signInButton.click();
+        signIn();
         element(Selectors.byCssSelector("input[name='username']")).setValue(userLogin);
         element(Selectors.byCssSelector("input[name='password']")).setValue(userPassword);
         element(Selectors.byXpath("//button[text()=' Sign In ']")).click();
     }
+
+
+    public void signIn() {
+        signInButton.click();
+    }
+
 
     public void logOut() {
         userNameButton.click();
@@ -113,5 +120,10 @@ public class Index extends CommonTestConditions {
 
     public void clickButtonByName(String value) {
         element(Selectors.byXpath("//button[normalize-space()='" + value + "']")).click();
+    }
+
+
+    public void openSignUpPage() {
+        open(MAIN_URL + "/join");
     }
 }
