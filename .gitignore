@@ -10,9 +10,6 @@ out/
 *.iml
 *.class
 
-prod-env.properties
-*.properties
-
 /misc
 /build/reports/tests
 *.log
