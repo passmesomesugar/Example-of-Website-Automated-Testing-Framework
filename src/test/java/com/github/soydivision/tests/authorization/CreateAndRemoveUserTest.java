@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 
 public class CreateAndRemoveUserTest extends CommonTestConditions {
-    @Test(groups = "this", description = "")
+    @Test(groups = "", description = "")
     public void registerAndRemoveNewUser() {
         getTempMailPage().openPage();
         getTempMailPage().copyEmailToClipboard();
